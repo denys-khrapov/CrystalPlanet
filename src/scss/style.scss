@@ -2,40 +2,42 @@
 @import "base/mixins";
 
 $cosmic-source: rgb(51, 51, 51);
-$cosmic-900: rgb(57, 57, 57);
-$cosmic-800: rgb(75, 75, 75);
-$cosmic-700: rgb(94, 94, 94);
-$cosmic-600: rgb(113, 113, 113);
-$cosmic-500: rgb(134, 134, 134);
-$cosmic-400: rgb(155, 155, 155);
-$cosmic-300: rgb(176, 176, 176);
-$cosmic-200: rgb(198, 198, 198);
-$cosmic-100: rgb(220, 220, 220);
-$cosmic-50: rgb(243, 243, 243);
+$cosmic-900: #393939;
+$cosmic-800: #4b4b4b;
+$cosmic-700: #5e5e5e;
+$cosmic-600: #727272;
+$cosmic-500: #868686;
+$cosmic-400: #9b9b9b;
+$cosmic-300: #b0b0b0;
+$cosmic-200: #c6c6c6;
+$cosmic-100: #dddddd;
+$cosmic-50: #f3f3f3;
 
 $eco-source: rgb(79, 91, 63);
-$eco-900: rgb(52, 59, 41);
-$eco-800: rgb(68, 78, 55);
-$eco-700: rgb(86, 98, 71);
-$eco-600: rgb(105, 118, 88);
-$eco-500: rgb(126, 138, 108);
-$eco-400: rgb(147, 159, 131);
-$eco-300: rgb(170, 180, 155);
-$eco-200: rgb(193, 201, 182);
-$eco-100: rgb(217, 222, 210);
-$eco-50: rgb(242, 244, 239);
+$eco-900: #343c2a;
+$eco-800: #454f38;
+$eco-700: #576247;
+$eco-600: #6a7659;
+$eco-500: #7e8b6d;
+$eco-400: #949f83;
+$eco-300: #aab49c;
+$eco-200: #c1c9b6;
+$eco-100: #dadfd2;
+$eco-50: #f2f4f0;
 
 $sand-source: rgb(148, 118, 77);
-$sand-900: rgb(71, 54, 29);
-$sand-800: rgb(93, 71, 39);
-$sand-700: rgb(116, 89, 52);
-$sand-600: rgb(138, 109, 68);
-$sand-500: rgb(159, 129, 88);
-$sand-400: rgb(180, 150, 111);
-$sand-300: rgb(199, 172, 138);
-$sand-200: rgb(216, 195, 169);
-$sand-100: rgb(233, 218, 202);
-$sand-50: rgb(247, 242, 236);
+$sand-900: #48361d;
+$sand-800: #5e4727;
+$sand-700: #745a34;
+$sand-600: #8a6d45;
+$sand-500: #a08158;
+$sand-400: #b49670;
+$sand-300: #c7ac8b;
+$sand-200: #d9c3a9;
+$sand-100: #e9dbca;
+$sand-50: #f8f3ed;
+
+$additional-source: #111111;
 
 $fontFamily: "Roboto", sans-serif;
 $fontSize: 16px;
@@ -43,7 +45,7 @@ $fontSize: 16px;
 $minWidth: 320px;
 $maxWidth: 1920px;
 $maxWidthContainer: 1148px;
-$md1: 1199px;
+$md1: 1119px;
 $md2: 1024px;
 $md3: 767px;
 $md4: 575px;
@@ -58,7 +60,6 @@ body {
 	font-size: $fontSize;
 	font-weight: 300;
 	line-height: 24px;
-	letter-spacing: 0.64px;
 	color: $cosmic-source;
 	background-color: $cosmic-50;
 }
@@ -73,9 +74,9 @@ body {
 
 .container {
 	width: 100%;
-	max-width: $maxWidthContainer;
+	max-width: 100%;
 	margin: 0 auto;
-	padding: 0 16px;
+	padding: 0;
 	@media (max-width: $md1) {
 	}
 	@media (max-width: $md2) {
@@ -90,5 +91,20 @@ body {
 	flex: 1 1 auto;
 }
 
+.label-agency {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: flex;
+}
+
+@media (max-width: $md1) {
+	.label-agency {
+		right: 0;
+		left: unset;
+	}
+}
+
+@import "base/social";
 @import "blocks/header";
 @import "blocks/footer";
