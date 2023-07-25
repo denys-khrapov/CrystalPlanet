@@ -1,0 +1,94 @@
+@import "fonts";
+@import "base/mixins";
+
+$cosmic-source: rgb(51, 51, 51);
+$cosmic-900: rgb(57, 57, 57);
+$cosmic-800: rgb(75, 75, 75);
+$cosmic-700: rgb(94, 94, 94);
+$cosmic-600: rgb(113, 113, 113);
+$cosmic-500: rgb(134, 134, 134);
+$cosmic-400: rgb(155, 155, 155);
+$cosmic-300: rgb(176, 176, 176);
+$cosmic-200: rgb(198, 198, 198);
+$cosmic-100: rgb(220, 220, 220);
+$cosmic-50: rgb(243, 243, 243);
+
+$eco-source: rgb(79, 91, 63);
+$eco-900: rgb(52, 59, 41);
+$eco-800: rgb(68, 78, 55);
+$eco-700: rgb(86, 98, 71);
+$eco-600: rgb(105, 118, 88);
+$eco-500: rgb(126, 138, 108);
+$eco-400: rgb(147, 159, 131);
+$eco-300: rgb(170, 180, 155);
+$eco-200: rgb(193, 201, 182);
+$eco-100: rgb(217, 222, 210);
+$eco-50: rgb(242, 244, 239);
+
+$sand-source: rgb(148, 118, 77);
+$sand-900: rgb(71, 54, 29);
+$sand-800: rgb(93, 71, 39);
+$sand-700: rgb(116, 89, 52);
+$sand-600: rgb(138, 109, 68);
+$sand-500: rgb(159, 129, 88);
+$sand-400: rgb(180, 150, 111);
+$sand-300: rgb(199, 172, 138);
+$sand-200: rgb(216, 195, 169);
+$sand-100: rgb(233, 218, 202);
+$sand-50: rgb(247, 242, 236);
+
+$fontFamily: "Roboto", sans-serif;
+$fontSize: 16px;
+
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1148px;
+$md1: 1199px;
+$md2: 1024px;
+$md3: 767px;
+$md4: 575px;
+
+@import "base/null";
+
+body {
+	&.lock {
+		overflow: hidden;
+	}
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	font-weight: 300;
+	line-height: 24px;
+	letter-spacing: 0.64px;
+	color: $cosmic-source;
+	background-color: $cosmic-50;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	width: 100%;
+	max-width: $maxWidthContainer;
+	margin: 0 auto;
+	padding: 0 16px;
+	@media (max-width: $md1) {
+	}
+	@media (max-width: $md2) {
+	}
+	@media (max-width: $md3) {
+	}
+	@media (max-width: $md4) {
+	}
+}
+
+.content {
+	flex: 1 1 auto;
+}
+
+@import "blocks/header";
+@import "blocks/footer";
