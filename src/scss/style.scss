@@ -45,7 +45,7 @@ $fontSize: 16px;
 $minWidth: 320px;
 $maxWidth: 1920px;
 $maxWidthContainer: 1148px;
-$md1: 1119px;
+$md1: 1199px;
 $md2: 1024px;
 $md3: 767px;
 $md4: 575px;
@@ -78,6 +78,7 @@ body {
 	margin: 0 auto;
 	padding: 0;
 	@media (max-width: $md1) {
+		padding: 0 32px;
 	}
 	@media (max-width: $md2) {
 	}
@@ -98,13 +99,30 @@ body {
 	display: flex;
 }
 
+.title {
+	font-family: "Felidae";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 34px;
+	letter-spacing: 6px;
+	text-decoration-line: underline;
+	text-transform: uppercase;
+}
+
 @media (max-width: $md1) {
 	.label-agency {
 		right: 0;
 		left: unset;
 	}
+	.title {
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: 4px;
+	}
 }
 
 @import "base/social";
 @import "blocks/header";
+@import "blocks/team";
 @import "blocks/footer";

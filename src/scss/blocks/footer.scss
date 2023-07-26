@@ -3,7 +3,7 @@
 	background-color: $additional-source;
 	display: flex;
 	flex-direction: row;
-	padding: 128px 0;
+	padding: 128px 0px;
 	position: relative;
 	.dynamic-left {
 		align-self: stretch;
@@ -45,7 +45,7 @@
 @media (max-width: $md1) {
 	/*! -- Footer styles----------------------------- */
 	.footer {
-		padding: 64px 0 80px;
+		padding: 64px 0px 80px;
 		.dynamic-left {
 			display: none;
 		}
@@ -53,7 +53,6 @@
 			display: none;
 		}
 		&__container {
-			padding: 0 32px;
 			flex-direction: row;
 			flex-wrap: wrap;
 			min-width: auto;
