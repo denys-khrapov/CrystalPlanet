@@ -122,8 +122,11 @@ body {
 	}
 }
 
+@import "base/links";
+@import "base/badge";
 @import "base/social";
 @import "blocks/header";
 @import "blocks/graphic";
+@import "blocks/vision";
 @import "blocks/team";
 @import "blocks/footer";
