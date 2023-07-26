@@ -2,6 +2,19 @@
 .vision {
 	padding: 128px 0px;
 	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		right: 0px;
+		top: -40px;
+		background-image: url("../img/vision-decor-bg.png");
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 1043px;
+		height: 1088px;
+		z-index: -1;
+	}
 
 	&__container {
 		display: flex;
@@ -93,6 +106,11 @@
 		&__right-column {
 			right: 222px;
 		}
+
+		&::before {
+			right: -185px;
+			top: 90px;
+		}
 	}
 }
 
@@ -103,6 +121,9 @@
 
 		.dynamic-left,
 		.dynamic-right {
+			display: none;
+		}
+		&::before {
 			display: none;
 		}
 		&__container {

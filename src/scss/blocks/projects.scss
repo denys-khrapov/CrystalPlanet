@@ -1,0 +1,45 @@
+/*! -- Projects styles----------------------------- */
+.projects {
+	padding: 160px 0px;
+	&__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 64px;
+		align-items: center;
+		justify-content: center;
+	}
+	&__title {
+		color: var(--cosmic-night-source, #333);
+	}
+	&__description {
+		max-width: 736px;
+		width: 100%;
+		color: $cosmic-900;
+		font-size: 28px;
+		line-height: 34px;
+		letter-spacing: 1.12px;
+		text-align: center;
+		strong {
+			color: $sand-source;
+			font-weight: 500;
+		}
+	}
+}
+
+@media (max-width: $md1) {
+	/*! -- Projects styles----------------------------- */
+	.projects {
+		padding: 128px 0px;
+		&__container {
+			row-gap: 32px;
+		}
+		&__description {
+			min-width: 256px;
+			max-width: 512px;
+			font-size: 20px;
+			font-weight: 300;
+			line-height: 30px;
+			letter-spacing: 0.8px;
+		}
+	}
+}

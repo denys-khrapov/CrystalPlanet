@@ -459,6 +459,23 @@ body.lock {
   position: relative;
 }
 
+.no-webp .vision::before {
+  background-image: url("../img/vision-decor-bg.png");
+}
+
+.vision::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: -40px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1043px;
+  height: 1088px;
+  z-index: -1;
+}
+
 .vision__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -602,6 +619,48 @@ body.lock {
 
 .vision-message .links {
   margin-left: auto;
+}
+
+/*! -- Projects styles----------------------------- */
+
+.projects {
+  padding: 160px 0px;
+}
+
+.projects__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 64px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.projects__title {
+  color: var(--cosmic-night-source, #333);
+}
+
+.projects__description {
+  max-width: 736px;
+  width: 100%;
+  color: #393939;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 1.12px;
+  text-align: center;
+}
+
+.projects__description strong {
+  color: rgb(148, 118, 77);
+  font-weight: 500;
 }
 
 /*! -- Team styles----------------------------- */
@@ -883,6 +942,10 @@ body.lock {
   background-image: url(../img/graphic-bg.webp);
 }
 
+.webp .vision::before {
+  background-image: url(../img/vision-decor-bg.webp);
+}
+
 .webp .team::before {
   background-image: url(../img/team-bg.webp);
 }
@@ -892,6 +955,11 @@ body.lock {
 
   .vision__right-column {
     right: 222px;
+  }
+
+  .vision::before {
+    right: -185px;
+    top: 90px;
   }
 }
 
@@ -1030,6 +1098,10 @@ body.lock {
 
   .vision .dynamic-left,
   .vision .dynamic-right {
+    display: none;
+  }
+
+  .vision::before {
     display: none;
   }
 
@@ -1238,6 +1310,25 @@ body.lock {
     width: calc(100% + 570.72px);
     right: -570.72px;
     bottom: -41.35px;
+  }
+
+  /*! -- Projects styles----------------------------- */
+
+  .projects {
+    padding: 128px 0px;
+  }
+
+  .projects__container {
+    row-gap: 32px;
+  }
+
+  .projects__description {
+    min-width: 256px;
+    max-width: 512px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.8px;
   }
 
   /*! -- Team styles----------------------------- */
