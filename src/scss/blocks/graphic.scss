@@ -57,38 +57,6 @@
 		width: 100%;
 		letter-spacing: 0.64px;
 	}
-	&__text-holder {
-		font-size: 28px;
-		font-weight: 700;
-		line-height: 34px;
-		letter-spacing: 1.12px;
-		max-width: 758px;
-		width: 100%;
-		position: relative;
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: -8px;
-			left: 0;
-			background-color: rgba(59, 58, 58, 0.15);
-			height: 1px;
-			width: 100%;
-			mix-blend-mode: difference;
-		}
-	}
-}
-
-.graphic-author {
-	display: flex;
-	flex-direction: row;
-	column-gap: 16px;
-	align-items: center;
-	&__image-holder {
-		background-color: $eco-600;
-		border-radius: 50%;
-		outline: 2px solid rgba(255, 255, 255, 0.5);
-		overflow: hidden;
-	}
 }
 
 @media (max-width: $md1) {
@@ -96,7 +64,7 @@
 	.graphic {
 		padding: 256px 0px 64px;
 		&::before {
-			background-image: url("../img/graphic-bg-mobile.jpg");
+			background-image: url("../img/graphic-bg-1199.jpg");
 		}
 		.dynamic-left {
 			display: none;
@@ -115,35 +83,12 @@
 			line-height: 18px;
 			letter-spacing: 0.48px;
 		}
-		&__text-holder {
-			max-width: 100%;
-			align-self: stretch;
-			font-size: 16px;
-			line-height: 24px;
-			letter-spacing: 0.64px;
-			p {
-				max-width: 512px;
-			}
-		}
 		&__content {
 			flex-wrap: wrap;
 			min-width: unset;
 			max-width: unset;
 			&--top {
 				row-gap: 24px;
-			}
-		}
-	}
-	.graphic-author {
-		align-items: flex-start;
-		&__text-holder {
-			font-size: 14px;
-			line-height: 21px;
-			letter-spacing: 0.56px;
-			max-width: 155px;
-			width: 100%;
-			> p:first-child {
-				margin-bottom: -4px;
 			}
 		}
 	}
