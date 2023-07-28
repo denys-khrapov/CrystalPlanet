@@ -1,0 +1,36 @@
+/*! -- Trigger styles----------------------------- */
+.trigger-box {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 8px;
+	flex: 1;
+}
+.trigger {
+	width: fit-content;
+	color: $cosmic-50;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+	letter-spacing: 0.84px;
+	text-transform: uppercase;
+	border-radius: 99px;
+	border: 1px solid $cosmic-50;
+	background: rgba(243, 243, 243, 0.01);
+	backdrop-filter: blur(140px);
+	&__inner {
+		padding: 11px 16px;
+	}
+}
+
+@media (max-width: $md1) {
+	/*! -- Trigger styles----------------------------- */
+	.trigger {
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: 1.92px;
+		&__inner {
+			padding: 7px 16px;
+		}
+	}
+}

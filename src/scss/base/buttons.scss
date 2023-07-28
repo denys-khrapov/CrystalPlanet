@@ -1,0 +1,45 @@
+/*! -- Buttons styles----------------------------- */
+.btn-full {
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	column-gap: 8px;
+	color: $cosmic-50;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+	letter-spacing: 0.84px;
+	text-transform: uppercase;
+	padding: 12px;
+	background-color: $sand-source;
+	border-radius: 99px;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	cursor: pointer;
+	&:focus {
+		background-color: $sand-500;
+		outline: none;
+	}
+	&:hover {
+		background-color: $sand-500;
+	}
+	&:active {
+		background-color: $sand-400;
+	}
+	&.blocked {
+		background-color: $cosmic-600;
+		color: $cosmic-500;
+		pointer-events: none;
+		box-shadow: none;
+		svg {
+			path {
+				fill: $cosmic-500;
+			}
+		}
+	}
+	&.blocked:focus {
+		outline: none;
+	}
+}

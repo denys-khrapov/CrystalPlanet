@@ -22,4 +22,10 @@
 		height: 12px;
 		border-radius: 50%;
 	}
+	&--noactive {
+		color: $cosmic-500;
+		&::before {
+			background-color: $cosmic-500;
+		}
+	}
 }
