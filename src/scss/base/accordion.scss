@@ -2,7 +2,7 @@
 
 .accordion,
 .accordion ul,
-.accordion ul li>div {
+.accordion ul li>div>div {
 	width: 100%;
 }
 
@@ -157,7 +157,7 @@
 		}
 	}
 
-	li {
+	>div {
 		position: relative;
 
 		&::before {
@@ -188,7 +188,7 @@
 	padding: 0 1px;
 }
 
-.accordion li {
+.accordion li>div {
 	display: block;
 	height: 550px;
 	background-position: 50% 27%;
@@ -196,7 +196,7 @@
 	overflow: hidden;
 }
 
-.accordion li>div {
+.accordion li>div>div {
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -236,7 +236,7 @@
 @media (max-width: $md1) {
 
 	/*! -- Accordion styles----------------------------- */
-	.accordion li>div {
+	.accordion li>div>div {
 		min-height: inherit;
 	}
 
@@ -250,14 +250,14 @@
 		display: block;
 
 		&:first-child {
-			>li {
+			>div {
 				border-top-left-radius: 4px;
 				border-top-right-radius: 4px;
 			}
 		}
 
 		&:last-child {
-			>li {
+			>div {
 				border-bottom-left-radius: 4px;
 				border-bottom-right-radius: 4px;
 			}
@@ -316,7 +316,7 @@
 		}
 	}
 
-	.accordion-link.active li {
+	.accordion-link.active>div {
 		height: auto;
 		min-height: 294px;
 	}
@@ -380,7 +380,7 @@
 			}
 		}
 
-		li {
+		li>div {
 			height: 54px;
 			background-position: 50% 50%;
 

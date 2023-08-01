@@ -661,7 +661,7 @@ body.lock {
 
 .accordion,
 .accordion ul,
-.accordion ul li > div {
+.accordion ul li > div > div {
   width: 100%;
 }
 
@@ -872,11 +872,11 @@ body.lock {
   transform: translateY(-50%);
 }
 
-.accordion-link.active li {
+.accordion-link.active > div {
   position: relative;
 }
 
-.accordion-link.active li::before {
+.accordion-link.active > div::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -907,7 +907,7 @@ body.lock {
   padding: 0 1px;
 }
 
-.accordion li {
+.accordion li > div {
   display: block;
   height: 550px;
   background-position: 50% 27%;
@@ -915,7 +915,7 @@ body.lock {
   overflow: hidden;
 }
 
-.accordion li > div {
+.accordion li > div > div {
   position: relative;
   width: 100%;
   height: 100%;
@@ -2559,7 +2559,7 @@ body.lock {
 
   /*! -- Accordion styles----------------------------- */
 
-  .accordion li > div {
+  .accordion li > div > div {
     min-height: inherit;
   }
 
@@ -2578,12 +2578,12 @@ body.lock {
     display: block;
   }
 
-  .accordion-link:first-child > li {
+  .accordion-link:first-child > div {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
   }
 
-  .accordion-link:last-child > li {
+  .accordion-link:last-child > div {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
   }
@@ -2662,7 +2662,7 @@ body.lock {
     letter-spacing: 0.64px;
   }
 
-  .accordion-link.active li {
+  .accordion-link.active > div {
     height: auto;
     min-height: 294px;
   }
@@ -2742,12 +2742,12 @@ body.lock {
     min-width: 208px;
   }
 
-  .accordion li {
+  .accordion li > div {
     height: 54px;
     background-position: 50% 50%;
   }
 
-  .accordion li > div {
+  .accordion li > div > div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

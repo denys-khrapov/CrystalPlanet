@@ -6,7 +6,7 @@
 	<div class="wrapper">
 		@@include('html/header.html',{})
 		<main class="content">
-			<section class="section-hero hero" id="section-hero">
+			<section class="section-hero hero section" id="section-hero">
 				<div class="circle">
 					<img src="@img/circle-decor.svg" width="474" height="474" alt="image">
 					<svg width="251" height="36" viewBox="0 0 251 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@
 					<img src="@img/stars-1.svg" width="1338" height="964" alt="image">
 				</div>
 			</section>
-			<section class="section-graphic graphic" id="section-graphic">
+			<section class="section-graphic graphic section" id="section-graphic">
 				<div class="graphic__container container">
 					<div class="graphic__row">
 						<div class="dynamic-left"></div>
@@ -104,7 +104,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section-vision vision" id="section-vision">
+			<section class="section-vision vision section" id="section-vision">
 				<div class="vision__container container">
 					<div class="dynamic-left"></div>
 					<div class="vision__left-column">
@@ -159,13 +159,13 @@
 							<div class="vision__image-holder vision__image-holder--1">
 								<picture>
 									<source media="(min-width:1200px)" srcset="@img/vision-img-1.webp" type="image/webp">
-									<img src="@img/vision-img-1-1199.png" width="239" height="239" alt="image">
+									<img src="@img/vision-img-1-1199.webp" width="239" height="239" alt="image">
 								</picture>
 							</div>
 							<div class="vision__image-holder vision__image-holder--2">
 								<picture>
 									<source media="(min-width:1200px)" srcset="@img/vision-img-2.webp" type="image/webp">
-									<img src="@img/vision-img-2-1199.png" width="239" height="478" alt="image">
+									<img src="@img/vision-img-2-1199.webp" width="239" height="478" alt="image">
 								</picture>
 							</div>
 						</div>
@@ -173,26 +173,26 @@
 							<div class="vision__image-holder vision__image-holder--3">
 								<picture>
 									<source media="(min-width:1200px)" srcset="@img/vision-img-3.webp" type="image/webp">
-									<img src="@img/vision-img-3-1199.png" width="239" height="358" alt="image">
+									<img src="@img/vision-img-3-1199.webp" width="239" height="358" alt="image">
 								</picture>
 							</div>
 							<div class="vision__image-holder vision__image-holder--4">
 								<picture>
 									<source media="(min-width:1200px)" srcset="@img/vision-img-4.webp" type="image/webp">
-									<img src="@img/vision-img-4-1199.png" width="239" height="239" alt="image">
+									<img src="@img/vision-img-4-1199.webp" width="239" height="239" alt="image">
 								</picture>
 							</div>
 							<div class="vision__image-holder vision__image-holder--5">
 								<picture>
 									<source media="(min-width:1200px)" srcset="@img/vision-img-5.webp" type="image/webp">
-									<img src="@img/vision-img-5-1199.png" width="239" height="478" alt="image">
+									<img src="@img/vision-img-5-1199.webp" width="240" height="479" alt="image">
 								</picture>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="section-sustainability sustainability" id="section-sustainability">
+			<section class="section-sustainability sustainability section" id="section-sustainability">
 				<div class="sustainability__container container">
 					<div class="sustainability__row">
 						<div class="dynamic-left"></div>
@@ -497,7 +497,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section-projects projects" id="section-projects">
+			<section class="section-projects projects section" id="section-projects">
 				<div class="projects__container container">
 					<h2 class="projects__title title">Our projects</h2>
 					<p class="projects__description">
@@ -507,12 +507,12 @@
 					</p>
 				</div>
 			</section>
-			<section class="section-announcement announcement" id="section-announcement">
+			<section class="section-announcement announcement section" id="section-announcement">
 				<div class="announcement__container container">
 					<div class="accordion">
 						<ul>
-							<div class="accordion-link active">
-								<li style="background-image: url('@img/accordion-img-1.jpg');">
+							<li class="accordion-link active">
+								<div style="background-image: url('@img/accordion-img-1.webp');">
 									<div>
 										<div class="accordion-head-line">
 											<h3 class="accordion__label">Sand</h3>
@@ -582,10 +582,10 @@
 											</div>
 										</div>
 									</div>
-								</li>
-							</div>
-							<div class="accordion-link">
-								<li style="background-image: url('@img/accordion-img-2.jpg');">
+								</div>
+							</li>
+							<li class="accordion-link">
+								<div style="background-image: url('@img/accordion-img-2.webp');">
 									<div>
 										<div class="accordion-head-line">
 											<h3 class="accordion__label">Air</h3>
@@ -618,10 +618,10 @@
 											</div>
 										</div>
 									</div>
-								</li>
-							</div>
-							<div class="accordion-link">
-								<li style="background-image: url('@img/accordion-img-3.jpg');">
+								</div>
+							</li>
+							<li class="accordion-link">
+								<div style="background-image: url('@img/accordion-img-3.webp');">
 									<div>
 										<div class="accordion-head-line">
 											<h3 class="accordion__label">Oxygen</h3>
@@ -654,10 +654,10 @@
 											</div>
 										</div>
 									</div>
-								</li>
-							</div>
-							<div class="accordion-link">
-								<li style="background-image: url('@img/accordion-img-4.jpg');">
+								</div>
+							</li>
+							<li class="accordion-link">
+								<div style="background-image: url('@img/accordion-img-4.webp');">
 									<div>
 										<div class="accordion-head-line">
 											<h3 class="accordion__label">Green</h3>
@@ -690,10 +690,10 @@
 											</div>
 										</div>
 									</div>
-								</li>
-							</div>
-							<div class="accordion-link">
-								<li style="background-image: url('@img/accordion-img-5.jpg');">
+								</div>
+							</li>
+							<li class="accordion-link">
+								<div style="background-image: url('@img/accordion-img-5.webp');">
 									<div>
 										<div class="accordion-head-line">
 											<h3 class="accordion__label">Ocean</h3>
@@ -726,13 +726,13 @@
 											</div>
 										</div>
 									</div>
-								</li>
-							</div>
+								</div>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</section>
-			<section class="section-team team" id="section-team">
+			<section class="section-team team section" id="section-team">
 				<div class="circle">
 					<picture>
 						<source media="(min-width:1200px)" srcset="@img/circle-decor-team.svg" type="image/webp">
@@ -892,15 +892,6 @@
 							<div class="dynamic-right"></div>
 						</div>
 					</div>
-				</div>
-				<div class="stars-1">
-					<!-- <img src="@img/stars-team.svg" width="876" height="631" alt="image"> -->
-					<!-- <img src="@img/stars-1.svg" width="1338" height="964" alt="image"> -->
-
-				</div>
-				<div class="stars-2">
-					<!-- <img src="@img/stars-team.svg" width="876" height="631" alt="image"> -->
-					<!-- <img src="@img/stars-1.svg" width="1338" height="964" alt="image"> -->
 				</div>
 			</section>
 		</main>

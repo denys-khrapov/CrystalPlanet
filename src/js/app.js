@@ -1,16 +1,10 @@
 jQuery(document).ready(function ($) {
-   // if (window.innerWidth >= 1200) {
-   //    $("body").on("scroll", handleScroll);
-   // }
    testWebPFunction();
    if (window.innerWidth >= 1200) {
       initScrollTo();
    }
-   // initScrollTo();
-   // $("body").on("scroll", handleScroll);
    initMobileMenu();
    initAccordion();
-   // handleScroll();
 });
 
 function testWebPFunction() {
@@ -126,166 +120,69 @@ function initAccordion() {
    });
 }
 
-// function initScrollTo() {
-//    $("a.scroll-to").click(function () {
-//       $("html, body").animate(
-//          {
-//             scrollTop: $($(this).attr("href")).offset().top + "px",
-//          },
-//          {
-//             duration: 700,
-//             easing: "swing",
-//          }
-//       );
-//       return false;
-//    });
-// }
-
-// function initScrollTo() {
-//    $("a.scroll-to").click(function () {
-//       var target = $($(this).attr("href"));
-//       var scrollText = $("#sidemenu-scroll-text");
-//       var sidemenuScroll = $("#sidemenu-scroll");
-//       if ($(window).scrollTop() + $(window).height() === $(document).height()) {
-//          // Если уже находимся в самом низу страницы
-//          $("html, body").animate(
-//             {
-//                scrollTop: 0,
-//             },
-//             {
-//                duration: 700,
-//                easing: "swing",
-//                complete: function () {
-//                   scrollText.text("Scroll Down");
-//                   sidemenuScroll.removeClass("active");
-//                },
-//             }
-//          );
-//       } else {
-//          // Если не находимся в самом низу страницы
-//          $("html, body").animate(
-//             {
-//                scrollTop: target.offset().top + "px",
-//             },
-//             {
-//                duration: 700,
-//                easing: "swing",
-//                complete: function () {
-//                   scrollText.text("Scroll Up");
-//                   sidemenuScroll.addClass("active");
-//                },
-//             }
-//          );
-//       }
-//       return false;
-//    });
-// }
-
-// function initScrollTo() {
-//    var sidemenuScroll = $("#sidemenu-scroll");
-
-//    $("a.scroll-to").click(function () {
-//       var target = $($(this).attr("href"));
-//       var scrollText = $(this).find("#sidemenu-scroll-text");
-
-//       if ($(window).scrollTop() + $(window).height() === $(document).height()) {
-//          // Если уже находимся в самом низу страницы
-//          $("html, body").animate(
-//             {
-//                scrollTop: 0,
-//             },
-//             {
-//                duration: 700,
-//                easing: "swing",
-//                complete: function () {
-//                   scrollText.text("Scroll Down");
-//                },
-//             }
-//          );
-//       } else {
-//          // Если не находимся в самом низу страницы
-//          $("html, body").animate(
-//             {
-//                scrollTop: target.offset().top + "px",
-//             },
-//             {
-//                duration: 700,
-//                easing: "swing",
-//                complete: function () {
-//                   scrollText.text("Scroll Up");
-//                },
-//             }
-//          );
-//       }
-//       return false;
-//    });
-
-//    // Обработчик события прокрутки страницы
-//    $(window).scroll(function () {
-//       var scrollText = $("#sidemenu-scroll-text");
-
-//       if ($(window).scrollTop() + $(window).height() === $(document).height()) {
-//          // Если пользователь прокрутил до самого низа страницы
-//          scrollText.text("Scroll Up");
-//          sidemenuScroll.addClass("active");
-//       } else if ($(window).scrollTop() === 0) {
-//          // Если пользователь находится в самом верху страницы
-//          scrollText.text("Scroll Down");
-//          sidemenuScroll.removeClass("active");
-//       }
-//    });
-// }
-
-// // Вызываем функцию после загрузки страницы
-// $(document).ready(function () {
-//    initScrollTo();
-// });
-
 function initScrollTo() {
-   var sidemenuScroll = $("#sidemenu-scroll");
-
    $("a.scroll-to").click(function () {
       var target = $($(this).attr("href"));
-      var scrollText = $(this).find("#sidemenu-scroll-text");
-
-      if (scrollText.text() === "Scroll Up") {
-         // Если текст кнопки "Scroll Up", то прокручиваем вверх
-         $("html, body").animate(
-            {
-               scrollTop: 0,
-            },
-            {
-               duration: 700,
-               easing: "swing",
-            }
-         );
-      } else {
-         // Если текст кнопки "Scroll Down", то прокручиваем вниз
-         $("html, body").animate(
-            {
-               scrollTop: target.offset().top + "px",
-            },
-            {
-               duration: 700,
-               easing: "swing",
-            }
-         );
-      }
+      $("html, body").animate(
+         {
+            scrollTop: target.offset().top + "px",
+         },
+         {
+            duration: 700,
+            easing: "swing",
+         }
+      );
       return false;
    });
+}
 
-   // Обработчик события прокрутки страницы
-   $(window).scroll(function () {
-      var scrollText = $("#sidemenu-scroll-text");
+function isLastSectionOrFooter(element) {
+   const elements = document.querySelectorAll("section, footer");
+   return element === elements[elements.length - 1];
+}
 
-      if ($(window).scrollTop() + $(window).height() === $(document).height()) {
-         // Если пользователь прокрутил до самого низа страницы
-         scrollText.text("Scroll Up");
-         sidemenuScroll.addClass("active");
-      } else if ($(window).scrollTop() === 0) {
-         // Если пользователь находится в самом верху страницы
-         scrollText.text("Scroll Down");
-         sidemenuScroll.removeClass("active");
+function updateScrollButtonText() {
+   const button = document.getElementById("sidemenu-scroll");
+   const buttonText = document.getElementById("sidemenu-scroll-text");
+   const elements = document.querySelectorAll("section, footer");
+   const lastElement = elements[elements.length - 1];
+
+   if (lastElement.getBoundingClientRect().top <= window.innerHeight) {
+      buttonText.textContent = "Scroll Up";
+      button.classList.add("active");
+   } else {
+      buttonText.textContent = "Scroll Down";
+      button.classList.remove("active");
+   }
+}
+
+function scrollToNextSectionOrFooter() {
+   const elements = document.querySelectorAll("section, footer");
+   let nextElement = null;
+
+   elements.forEach((element, index) => {
+      if (element.getBoundingClientRect().top > 0 && !nextElement) {
+         nextElement = elements[index];
       }
    });
+
+   if (nextElement) {
+      nextElement.scrollIntoView({ behavior: "smooth" });
+      updateScrollButtonText();
+   }
 }
+
+document
+   .getElementById("sidemenu-scroll")
+   .addEventListener("click", function () {
+      const elements = document.querySelectorAll("section, footer");
+      const lastElement = elements[elements.length - 1];
+
+      if (lastElement.getBoundingClientRect().top <= window.innerHeight) {
+         window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+         scrollToNextSectionOrFooter();
+      }
+   });
+
+document.addEventListener("scroll", updateScrollButtonText);
