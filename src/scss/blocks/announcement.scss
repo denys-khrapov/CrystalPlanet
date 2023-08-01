@@ -1,6 +1,7 @@
 /*! -- Announcement styles----------------------------- */
 .announcement {
-	padding: 64px 190px 64px 42px;
+	padding: 64px 190px 62px 42px;
+
 	&__container {
 		display: flex;
 		flex-direction: row;
@@ -8,9 +9,11 @@
 }
 
 @media (max-width: $md1) {
+
 	/*! -- Announcement styles----------------------------- */
 	.announcement {
 		padding: 64px 0px;
+
 		&__container {
 			display: flex;
 			flex-direction: row;

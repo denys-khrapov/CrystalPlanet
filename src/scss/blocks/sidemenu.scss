@@ -1,0 +1,478 @@
+/*! -- Sidemenu styles----------------------------- */
+.sidemenu {
+	height: 100vh;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 166px;
+	z-index: 99;
+	mix-blend-mode: difference;
+	border-left: 1px solid rgba(255, 255, 255, 0.05);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 32px 0px 0px 0px;
+
+	&__burger {
+		mix-blend-mode: difference;
+		color: $cosmic-50;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 17px;
+		letter-spacing: 4.2px;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: 8px;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+
+		svg {
+			path {
+				transition: all 0.3s ease 0s;
+			}
+		}
+
+		&:hover {
+			color: $cosmic-400;
+
+			svg {
+				path {
+					fill: $cosmic-400;
+				}
+			}
+		}
+
+		&:active {
+			color: $cosmic-900;
+
+			svg {
+				path {
+					fill: $cosmic-900;
+				}
+			}
+		}
+
+		&:focus {
+			outline: none;
+			color: $cosmic-400;
+
+			svg {
+				path {
+					fill: $cosmic-400;
+				}
+			}
+		}
+
+		.blocked {
+			color: $cosmic-700;
+			outline: none;
+
+			svg {
+				path {
+					fill: $cosmic-700
+				}
+			}
+		}
+	}
+
+	&__scroll {
+		display: flex;
+		width: 166px;
+		padding: 48px 55px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 4px;
+		flex-shrink: 0;
+		background: rgba(255, 255, 255, 0.05);
+		color: $sand-100;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 21px;
+		letter-spacing: 0.84px;
+		text-transform: uppercase;
+		mix-blend-mode: difference;
+		text-transform: uppercase;
+
+		&.active {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+
+
+/*! -- Menu styles----------------------------- */
+
+.menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	transform: translateX(100%);
+	width: 100%;
+	max-width: 482px;
+	height: 100vh;
+	transition: all 0.3s ease 0s;
+	z-index: 999;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	padding: 64px 0px 64px 37px;
+	overflow: auto;
+	border-left: 1px solid rgba(57, 57, 57, 0.15);
+	background: #f3f3f3;
+	mix-blend-mode: normal;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	flex-basis: 100% !important;
+
+	.btn-full {
+		margin: 24px 0px 92px 0px;
+	}
+
+	.social {
+		align-items: flex-start;
+		row-gap: 24px;
+		margin: 94px 0px 0px 0px;
+
+		&__link {
+			color: $cosmic-900;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 17px;
+			letter-spacing: 4.2px;
+
+			svg {
+				width: 24px;
+				height: 24px;
+
+				path {
+					fill: $cosmic-900;
+				}
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		margin: 118px 0px 0px 0px;
+		flex-direction: column;
+		column-gap: 0px;
+		row-gap: 40px;
+
+		li {
+			font-size: 14px;
+			color: $cosmic-300;
+		}
+	}
+
+	.menu-item {
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: -24px;
+			width: 1px;
+			height: 100%;
+			z-index: 1;
+		}
+
+		&:last-child {
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	&__link {
+		color: $sand-source;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 17px;
+		letter-spacing: 4.2px;
+		text-transform: uppercase;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		column-gap: 8px;
+		width: max-content;
+
+
+		svg {
+			transform: rotate(180deg);
+
+			path {
+				transition: all 0.3s ease 0s;
+			}
+		}
+
+		&.active {
+			svg {
+				transform: rotate(0deg);
+			}
+		}
+
+		&:hover {
+			color: $sand-300;
+
+			svg {
+				path {
+					fill: $sand-300;
+				}
+			}
+		}
+
+		&:active {
+			color: $sand-900;
+
+			svg {
+				path {
+					fill: $sand-900;
+				}
+			}
+		}
+
+		&:focus {
+			outline: 0;
+			color: $sand-source;
+
+
+			svg {
+				path {
+					fill: $sand-source;
+				}
+			}
+		}
+
+		&.blocked {
+			pointer-events: none;
+			color: $cosmic-300;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 17px;
+			letter-spacing: 4.2px;
+
+			svg {
+				path {
+					fill: $cosmic-300;
+				}
+			}
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 32px;
+		left: 37px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		column-gap: 8px;
+		color: $cosmic-50;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 17px;
+		letter-spacing: 4.2px;
+		text-transform: uppercase;
+		mix-blend-mode: difference;
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+
+		svg {
+			path {
+				transition: all 0.3s ease 0s;
+			}
+		}
+
+		&:hover {
+			color: $cosmic-400;
+
+			svg {
+				path {
+					fill: $cosmic-400
+				}
+			}
+		}
+
+		&:active {
+			color: $cosmic-900;
+
+			svg {
+				path {
+					fill: $cosmic-900
+				}
+			}
+		}
+	}
+
+	&.active {
+		transform: translateX(0%);
+		overflow-y: auto;
+
+	}
+}
+
+/*! -- Submenu styles----------------------------- */
+
+#submenu {
+	display: flex;
+	flex-direction: column;
+	row-gap: 24px;
+	padding: 48px 0px 24px 0px;
+	position: relative;
+	max-width: 186px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 24px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $cosmic-300;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $cosmic-300;
+	}
+
+}
+
+
+
+@media (max-width:$md1) {
+	.sidemenu {
+		display: none;
+	}
+
+	.menu {
+		height: 100%;
+		max-height: 900px;
+		justify-content: space-between;
+		transform: translate(0%, -100%);
+		width: 100vw;
+		max-width: 100%;
+		background-color: $cosmic-source;
+		padding: 80px 32px 16px;
+		flex-direction: column;
+		z-index: 99;
+		flex-wrap: nowrap;
+
+		&.active {
+			transform: translate(0%, 0%);
+		}
+
+		&__wrapper {
+			display: flex;
+			height: 716px;
+			min-height: 716px;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 96px;
+			align-self: stretch;
+		}
+
+		&__list {
+			width: 100%;
+			align-items: center;
+			margin: 0px 0px 0px 0px;
+			row-gap: 48px;
+
+			li {
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 17px;
+				letter-spacing: 4.2px;
+			}
+		}
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__link {
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 14px;
+			letter-spacing: 1.92px;
+			align-self: center;
+
+			&.blocked {
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 17px;
+				letter-spacing: 1.92px;
+			}
+
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+
+		}
+
+		.social {
+			margin: 0px;
+			width: 100%;
+			align-items: center;
+			row-gap: 16px;
+
+			&__link {
+				color: $sand-50;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 14px;
+				letter-spacing: 1.92px;
+
+				svg {
+					width: 16px;
+					height: 16px;
+
+					path {
+						fill: $sand-50;
+					}
+				}
+			}
+
+		}
+
+
+		&__close {
+			display: none;
+		}
+	}
+
+	#submenu {
+		align-items: center;
+		padding: 48px 0px 0px;
+
+		li {
+			a {
+				line-height: 17px;
+			}
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+
+}

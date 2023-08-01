@@ -8,6 +8,7 @@
 	max-width: 758px;
 	width: 100%;
 	position: relative;
+
 	&::after {
 		content: "";
 		position: absolute;
@@ -25,15 +26,32 @@
 	flex-direction: row;
 	column-gap: 16px;
 	align-items: center;
+
 	&__image-holder {
 		background-color: $eco-600;
 		border-radius: 50%;
-		outline: 2px solid rgba(255, 255, 255, 0.5);
+		border: 2px solid rgba(255, 255, 255, 0.5);
 		overflow: hidden;
+		height: 50px;
+		width: 50px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__text-holder {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 21px;
+		letter-spacing: 0.56px;
 	}
 }
 
 @media (max-width: $md1) {
+
 	/*! -- Author styles----------------------------- */
 	.author-message {
 		max-width: 100%;
@@ -41,21 +59,29 @@
 		font-size: 16px;
 		line-height: 24px;
 		letter-spacing: 0.64px;
+
 		p {
 			max-width: 512px;
 		}
 	}
+
 	.author {
 		align-items: flex-start;
+
 		&__text-holder {
 			font-size: 14px;
 			line-height: 21px;
 			letter-spacing: 0.56px;
 			max-width: 183px;
 			width: 100%;
-			> p:first-child {
+
+			>p:first-child {
 				margin-bottom: -4px;
 			}
 		}
+	}
+
+	.sustainability .author {
+		align-items: center;
 	}
 }

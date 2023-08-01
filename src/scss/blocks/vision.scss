@@ -2,6 +2,7 @@
 .vision {
 	padding: 128px 0px;
 	position: relative;
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -27,6 +28,7 @@
 		flex: 1;
 		align-self: stretch;
 	}
+
 	.dynamic-right {
 		min-width: 802px;
 		max-width: 1162px;
@@ -41,6 +43,7 @@
 		max-width: 568px;
 		flex: 1;
 	}
+
 	&__right-column {
 		display: flex;
 		flex-direction: row;
@@ -50,23 +53,28 @@
 		right: 402px;
 		top: -130px;
 	}
+
 	&__image-column {
 		display: flex;
 		flex-direction: column;
 		row-gap: 22px;
 	}
+
 	&__header {
 		display: flex;
 		flex-direction: column;
 		row-gap: 48px;
 		margin: 0px 0px 64px 0px;
+
 		p {
 			letter-spacing: 0.64px;
+
 			span {
 				color: $sand-source;
 			}
 		}
 	}
+
 	&__text-holder {
 		margin: 0px 0px 64px 0px;
 		color: $sand-600;
@@ -76,9 +84,11 @@
 		line-height: 48px;
 		letter-spacing: 1.92px;
 	}
+
 	&__title {
 		color: $sand-source;
 	}
+
 	&-attention {
 		padding: 23px 16px;
 		border-radius: 8px;
@@ -88,12 +98,14 @@
 		column-gap: 8px;
 		letter-spacing: 0.64px;
 	}
+
 	&-message {
 		color: $cosmic-900;
 		letter-spacing: 0.64px;
 		display: flex;
 		flex-direction: column;
 		row-gap: 16px;
+
 		.links {
 			margin-left: auto;
 		}
@@ -101,6 +113,7 @@
 }
 
 @media (max-width: 1675px) {
+
 	/*! -- Vision styles----------------------------- */
 	.vision {
 		&__right-column {
@@ -115,6 +128,7 @@
 }
 
 @media (max-width: $md1) {
+
 	/*! -- Vision styles----------------------------- */
 	.vision {
 		padding: 64px 0px;
@@ -123,14 +137,17 @@
 		.dynamic-right {
 			display: none;
 		}
+
 		&::before {
 			display: none;
 		}
+
 		&__container {
 			display: flex;
 			flex-direction: column-reverse;
 			row-gap: 32px;
 		}
+
 		&__left-column {
 			min-width: unset;
 			max-width: unset;
@@ -138,11 +155,13 @@
 			flex-wrap: wrap;
 			gap: 32px;
 		}
+
 		&__header {
 			min-width: 256px;
 			flex: 1;
 			margin: 0px 0px 0px 0px;
 			row-gap: 24px;
+
 			p {
 				font-size: 12px;
 				font-weight: 300;
@@ -150,6 +169,7 @@
 				letter-spacing: 0.48px;
 			}
 		}
+
 		&-attention {
 			padding: 15px 16px;
 			font-size: 12px;
@@ -157,6 +177,7 @@
 			line-height: 18px;
 			letter-spacing: 0.48px;
 		}
+
 		&__text-holder {
 			display: flex;
 			min-width: 256px;
@@ -167,14 +188,17 @@
 			letter-spacing: 1.32px;
 			margin: 0px 0px 0px 0px;
 		}
+
 		&-message {
 			min-width: 256px;
+			max-width: 512px;
 			flex: 1;
 			font-size: 12px;
 			font-weight: 300;
 			line-height: 18px;
 			letter-spacing: 0.48px;
 		}
+
 		&__right-column {
 			position: static;
 			flex-wrap: wrap;
@@ -182,6 +206,7 @@
 			align-items: center;
 			column-gap: 16px;
 		}
+
 		&__image-column {
 			flex-direction: row;
 			min-width: 112px;
@@ -192,9 +217,11 @@
 			align-self: stretch;
 			flex-wrap: wrap;
 			justify-content: flex-start;
+
 			&--1 {
 				gap: 24px;
 			}
+
 			&--2 {
 				gap: 16px;
 			}
@@ -210,6 +237,7 @@
 			position: relative;
 			border-radius: 999px;
 			overflow: hidden;
+
 			img {
 				position: absolute;
 				top: 0;
@@ -219,8 +247,10 @@
 				max-height: 100%;
 				object-fit: cover;
 			}
+
 			&--1 {
 				height: 256px;
+
 				img {
 					height: calc(100% + 52.36px);
 					width: calc(100% - 0.25px);
@@ -228,8 +258,10 @@
 					bottom: -52.36px;
 				}
 			}
+
 			&--2 {
 				height: 416px;
+
 				img {
 					height: calc(100% + 229.46px);
 					width: calc(100% + 213.69px);
@@ -237,8 +269,10 @@
 					bottom: -229.46px;
 				}
 			}
+
 			&--3 {
 				height: 352px;
+
 				img {
 					height: calc(100% + 52.52px);
 					width: calc(100% + 346.81px);
@@ -246,8 +280,10 @@
 					bottom: -52.52px;
 				}
 			}
+
 			&--4 {
 				height: 256px;
+
 				img {
 					height: calc(100% + 23.43px);
 					width: calc(100% + 154.57px);
@@ -255,8 +291,10 @@
 					bottom: -23.43px;
 				}
 			}
+
 			&--5 {
 				height: 416px;
+
 				img {
 					height: calc(100% + 41.35px);
 					width: calc(100% + 570.72px);

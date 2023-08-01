@@ -1,7 +1,8 @@
 /*! -- Sustainability styles----------------------------- */
 .sustainability {
 	position: relative;
-	padding: 64px 0px 518px;
+	padding: 61px 0px 515px;
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -17,29 +18,35 @@
 		height: 100%;
 		z-index: -1;
 	}
+
 	.dynamic-left {
 		min-width: 42px;
 		max-width: 190px;
 		flex: 1;
 		align-self: stretch;
 	}
+
 	.dynamic-right {
 		min-width: 42px;
 		max-width: 190px;
 		flex: 1;
 		align-self: stretch;
 	}
+
 	&__title {
 		color: $sand-source;
 	}
+
 	&__container {
 		display: flex;
 		flex-direction: column;
 		row-gap: 98px;
 	}
+
 	&__row {
 		display: flex;
 		flex-direction: row;
+
 		&--items {
 			.dynamic-right {
 				width: 190px;
@@ -50,6 +57,7 @@
 			}
 		}
 	}
+
 	&__content {
 		flex: 1;
 		display: flex;
@@ -57,6 +65,7 @@
 		row-gap: 16px;
 		min-width: 1116px;
 		max-width: 1540px;
+
 		&--items {
 			row-gap: 48px;
 			min-width: 926px;
@@ -64,16 +73,20 @@
 			flex: 1;
 		}
 	}
+
 	&__items {
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
 		align-self: stretch;
-		gap: 24px;
+		row-gap: 24px;
+		column-gap: 48px;
 		position: relative;
+
 		&--mobile {
 			display: none;
 		}
+
 		&:first-child {
 			&::after {
 				content: "";
@@ -86,10 +99,12 @@
 			}
 		}
 	}
+
 	&__item {
 		display: flex;
 		flex: 1;
 		position: relative;
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -99,18 +114,21 @@
 			height: 100%;
 			background-color: $cosmic-100;
 		}
+
 		&:last-child {
 			&::after {
 				display: none;
 			}
 		}
 	}
+
 	&__inner {
 		width: 100%;
 		padding: 24px 0px;
 		text-align: center;
 		letter-spacing: 0.64px;
 	}
+
 	&__svg-holder {
 		display: flex;
 		justify-content: center;
@@ -119,15 +137,19 @@
 }
 
 @media (max-width: $md1) {
+
 	/*! -- Sustainability styles----------------------------- */
 	.sustainability {
 		padding: 64px 0px 384px;
+
 		&::before {
 			background-image: url("../img/sustainability-bg-1199.jpg");
 		}
+
 		&__container {
 			row-gap: 32px;
 		}
+
 		.dynamic-left,
 		.dynamic-right {
 			display: none;
@@ -139,29 +161,36 @@
 			gap: 16px;
 			flex-wrap: wrap;
 			justify-content: center;
+
 			&--mobile {
 				display: flex;
 			}
+
 			&::after {
 				display: none;
 			}
 		}
+
 		&__item {
 			min-width: 103px;
 			max-width: 256px;
+
 			&::after {
 				display: none;
 			}
 		}
+
 		&__content {
 			min-width: unset;
 			max-width: unset;
+
 			&--items {
 				min-width: unset;
 				max-width: unset;
 				flex-direction: row;
 			}
 		}
+
 		&__inner {
 			font-size: 12px;
 			line-height: 18px;
@@ -172,9 +201,11 @@
 			justify-content: center;
 			align-items: center;
 		}
+
 		&__svg-holder {
 			width: 32px;
 			height: 32px;
+
 			svg {
 				display: flex;
 				width: 100%;
@@ -186,6 +217,7 @@
 }
 
 @media (max-width: $md3) {
+
 	/*! -- Sustainability styles----------------------------- */
 	.sustainability {
 		&::before {

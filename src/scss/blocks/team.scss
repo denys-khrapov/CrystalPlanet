@@ -1,8 +1,10 @@
 /*! -- Team styles----------------------------- */
 .team {
-	padding: 256px 0px 128px;
+	padding: 256px 0px 132px;
 	background-color: $additional-source;
 	position: relative;
+	overflow: hidden;
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -17,6 +19,26 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
+
+	.ellipse-right,
+	.ellipse-left {
+		position: absolute;
+		width: 950px;
+		height: 950px;
+		filter: blur(65px);
+
+	}
+
+	.ellipse-left {
+		top: 123px;
+		left: -401px;
+	}
+
+	.ellipse-right {
+		bottom: -612px;
+		right: -655px;
+	}
+
 	&__container {
 		position: relative;
 		z-index: 1;
@@ -24,24 +46,29 @@
 		flex-direction: column;
 		row-gap: 64px;
 	}
+
 	.dynamic-left {
 		align-self: stretch;
 		flex: 1;
 		min-width: 42px;
 		max-width: 190px;
 	}
+
 	.dynamic-right {
 		min-width: 190px;
 		max-width: 190px;
 		flex: 1;
 		align-self: stretch;
 	}
+
 	&__row {
 		display: flex;
 		flex-direction: column;
+
 		&-header {
 			display: flex;
 			flex-direction: row;
+
 			.team__content {
 				min-width: 1116px;
 				max-width: 1540px;
@@ -51,18 +78,22 @@
 			}
 		}
 	}
+
 	&__content {
 		display: flex;
 		flex-direction: row;
 	}
+
 	&__title {
 		color: $sand-50;
 	}
+
 	&__subtitle {
 		display: flex;
 		flex-direction: row;
 		margin: 0px 0px 31px 0px;
 		border-bottom: 1px solid $cosmic-700;
+
 		h2 {
 			min-width: 1116px;
 			max-width: 1540px;
@@ -75,6 +106,7 @@
 			letter-spacing: 1.92px;
 		}
 	}
+
 	&__description {
 		font-family: "Felidae";
 		color: $sand-50;
@@ -85,6 +117,7 @@
 		max-width: 663px;
 		width: 100%;
 	}
+
 	&__profile-box {
 		min-width: 926px;
 		max-width: 1540px;
@@ -95,8 +128,9 @@
 		align-items: flex-start;
 		align-content: flex-start;
 		flex: 1;
-		padding: 8px 0px;
+		padding: 4px 0px;
 	}
+
 	&__profile {
 		width: 100%;
 		max-width: 166px;
@@ -106,14 +140,16 @@
 		line-height: 21px;
 		letter-spacing: 0.56px;
 	}
+
 	&__image-holder {
 		display: flex;
 		margin: 0px 0px 16px 0px;
 		border-radius: 50%;
-		outline: 2px solid rgba(51, 51, 51, 0.5);
+		border: 2px solid rgba(51, 51, 51, 0.5);
 		background: $eco-600;
 		overflow: hidden;
 	}
+
 	&__name {
 		color: $sand-50;
 		font-size: 14px;
@@ -125,12 +161,31 @@
 }
 
 @media (max-width: $md1) {
+
 	/*! -- Team styles----------------------------- */
 	.team {
 		padding: 256px 0px 64px;
+		background-color: #111;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url("../img/team-bg-dust.png");
+			background-position: center center;
+			background-size: contain;
+			background-repeat: repeat;
+		}
+
 		.dynamic-left {
 			display: none;
 		}
+
 		.dynamic-right {
 			display: none;
 		}
@@ -148,20 +203,26 @@
 				}
 			}
 		}
+
 		&__description {
 			font-size: 22px;
 			line-height: 33px;
 			min-width: 256px;
 			max-width: 512px;
+			letter-spacing: 1.32px;
 		}
+
 		&__profile-box {
 			min-width: unset;
 			max-width: unset;
 			gap: 16px;
 			justify-content: center;
+			padding: 8px 0px;
 		}
+
 		&__subtitle {
 			margin: 0px 0px 23px 0px;
+
 			h2 {
 				min-width: unset;
 				max-width: unset;
@@ -171,11 +232,12 @@
 				letter-spacing: 1.32px;
 			}
 		}
+
 		&__profile {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			min-width: 120px;
+			min-width: 115px;
 			max-width: 240px;
 			flex: 1;
 			text-align: center;
@@ -184,15 +246,18 @@
 			line-height: 18px;
 			letter-spacing: 0.48px;
 		}
+
 		&__image-holder {
 			width: 120px;
 			height: 120px;
+
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 			}
 		}
+
 		&__name {
 			font-size: 12px;
 			font-weight: 700;
