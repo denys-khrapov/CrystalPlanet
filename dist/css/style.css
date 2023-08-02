@@ -121,7 +121,7 @@ body {
   font-weight: 300;
   line-height: 24px;
   color: rgb(51, 51, 51);
-  background-color: #f3f3f3;
+  background-color: rgb(51, 51, 51);
 }
 
 body.lock {
@@ -233,8 +233,8 @@ body.lock {
   -webkit-transform: translate(-50%, -50%) rotate(0deg);
   -ms-transform: translate(-50%, -50%) rotate(0deg);
   transform: translate(-50%, -50%) rotate(0deg);
-  -webkit-animation: rotateStars1 20s linear infinite;
-  animation: rotateStars1 20s linear infinite;
+  -webkit-animation: rotateStars1 30s linear infinite;
+  animation: rotateStars1 30s linear infinite;
 }
 
 .stars-2 {
@@ -245,8 +245,8 @@ body.lock {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
   -ms-transform: translate(-50%, -50%) rotate(-45deg);
   transform: translate(-50%, -50%) rotate(-45deg);
-  -webkit-animation: rotateStars2 25s linear infinite;
-  animation: rotateStars2 25s linear infinite;
+  -webkit-animation: rotateStars2 40s linear infinite;
+  animation: rotateStars2 40s linear infinite;
 }
 
 .team .circle {
@@ -264,29 +264,9 @@ body.lock {
     transform: translate(-50%, -50%) rotate(0deg);
   }
 
-  20% {
-    -webkit-transform: translate(-50%, -50%) rotate(-30deg);
-    transform: translate(-50%, -50%) rotate(-30deg);
-  }
-
-  40% {
-    -webkit-transform: translate(-50%, -50%) rotate(-60deg);
-    transform: translate(-50%, -50%) rotate(-60deg);
-  }
-
-  60% {
-    -webkit-transform: translate(-50%, -50%) rotate(-90deg);
-    transform: translate(-50%, -50%) rotate(-90deg);
-  }
-
-  80% {
-    -webkit-transform: translate(-50%, -50%) rotate(-120deg);
-    transform: translate(-50%, -50%) rotate(-120deg);
-  }
-
   100% {
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-    transform: translate(-50%, -50%) rotate(0deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
 
@@ -296,29 +276,9 @@ body.lock {
     transform: translate(-50%, -50%) rotate(0deg);
   }
 
-  20% {
-    -webkit-transform: translate(-50%, -50%) rotate(-30deg);
-    transform: translate(-50%, -50%) rotate(-30deg);
-  }
-
-  40% {
-    -webkit-transform: translate(-50%, -50%) rotate(-60deg);
-    transform: translate(-50%, -50%) rotate(-60deg);
-  }
-
-  60% {
-    -webkit-transform: translate(-50%, -50%) rotate(-90deg);
-    transform: translate(-50%, -50%) rotate(-90deg);
-  }
-
-  80% {
-    -webkit-transform: translate(-50%, -50%) rotate(-120deg);
-    transform: translate(-50%, -50%) rotate(-120deg);
-  }
-
   100% {
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-    transform: translate(-50%, -50%) rotate(0deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
 
@@ -328,29 +288,9 @@ body.lock {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 
-  20% {
-    -webkit-transform: translate(-50%, -50%) rotate(-75deg);
-    transform: translate(-50%, -50%) rotate(-75deg);
-  }
-
-  40% {
-    -webkit-transform: translate(-50%, -50%) rotate(-105deg);
-    transform: translate(-50%, -50%) rotate(-105deg);
-  }
-
-  60% {
-    -webkit-transform: translate(-50%, -50%) rotate(-135deg);
-    transform: translate(-50%, -50%) rotate(-135deg);
-  }
-
-  80% {
-    -webkit-transform: translate(-50%, -50%) rotate(-165deg);
-    transform: translate(-50%, -50%) rotate(-165deg);
-  }
-
   100% {
-    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-    transform: translate(-50%, -50%) rotate(-45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
 
@@ -360,29 +300,9 @@ body.lock {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 
-  20% {
-    -webkit-transform: translate(-50%, -50%) rotate(-75deg);
-    transform: translate(-50%, -50%) rotate(-75deg);
-  }
-
-  40% {
-    -webkit-transform: translate(-50%, -50%) rotate(-105deg);
-    transform: translate(-50%, -50%) rotate(-105deg);
-  }
-
-  60% {
-    -webkit-transform: translate(-50%, -50%) rotate(-135deg);
-    transform: translate(-50%, -50%) rotate(-135deg);
-  }
-
-  80% {
-    -webkit-transform: translate(-50%, -50%) rotate(-165deg);
-    transform: translate(-50%, -50%) rotate(-165deg);
-  }
-
   100% {
-    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-    transform: translate(-50%, -50%) rotate(-45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
 
@@ -615,6 +535,10 @@ body.lock {
   font-weight: 300;
   line-height: 21px;
   letter-spacing: 0.56px;
+}
+
+.author__position {
+  color: #4b4b4b;
 }
 
 /*! -- Badge styles----------------------------- */
@@ -1570,6 +1494,8 @@ body.lock {
 .graphic {
   padding: 128px 0px 62px;
   position: relative;
+  height: 100vh;
+  min-height: 750px;
 }
 
 .no-webp .graphic::before {
@@ -1600,7 +1526,10 @@ body.lock {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  row-gap: 568px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .graphic .dynamic-left {
@@ -1671,6 +1600,7 @@ body.lock {
 .vision {
   padding: 128px 0px;
   position: relative;
+  background-color: #f3f3f3;
 }
 
 .no-webp .vision::before {
@@ -2024,6 +1954,7 @@ body.lock {
 
 .projects {
   padding: 160px 0px;
+  background-color: #f3f3f3;
 }
 
 .projects__container {
@@ -2065,7 +1996,9 @@ body.lock {
 /*! -- Announcement styles----------------------------- */
 
 .announcement {
-  padding: 64px 190px 62px 42px;
+  padding: 63px 190px 62px 42px;
+  border-top: 1px solid #dddddd;
+  background-color: #f3f3f3;
 }
 
 .announcement__container {
@@ -2103,6 +2036,21 @@ body.lock {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.team::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/dust.svg");
+  background-position: center center;
+  background-size: 200px 200px;
+  background-repeat: repeat;
 }
 
 .team .ellipse-right,
@@ -2291,6 +2239,7 @@ body.lock {
 .team__name {
   color: #f8f3ed;
   font-size: 14px;
+  font-style: normal;
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0.56px;
@@ -2547,10 +2496,6 @@ body.lock {
     width: 100%;
   }
 
-  .author__text-holder > p:first-child {
-    margin-bottom: -4px;
-  }
-
   .sustainability .author {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -2780,6 +2725,7 @@ body.lock {
     font-weight: 700;
     line-height: 18px;
     letter-spacing: 0.64px;
+    letter-spacing: 1px;
     opacity: 0.85;
   }
 
@@ -3107,6 +3053,8 @@ body.lock {
 
   .graphic {
     padding: 256px 0px 64px;
+    height: auto;
+    min-height: auto;
   }
 
   .no-webp .graphic::before {
@@ -3492,7 +3440,7 @@ body.lock {
   /*! -- Announcement styles----------------------------- */
 
   .announcement {
-    padding: 64px 0px;
+    padding: 63px 0px 64px;
   }
 
   .announcement__container {
@@ -3510,24 +3458,6 @@ body.lock {
   .team {
     padding: 256px 0px 64px;
     background-color: #111;
-  }
-
-  .no-webp .team::before {
-    background-image: url("../img/team-bg-dust.png");
-  }
-
-  .team::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-position: center center;
-    background-size: contain;
-    background-repeat: repeat;
   }
 
   .team .dynamic-left {
@@ -3706,10 +3636,6 @@ body.lock {
 
   .webp .sustainability::before {
     background-image: url(../img/sustainability-bg-1199.webp);
-  }
-
-  .webp .team::before {
-    background-image: url(../img/team-bg-dust.webp);
   }
 }
 

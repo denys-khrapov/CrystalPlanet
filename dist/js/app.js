@@ -136,16 +136,16 @@ function initScrollTo() {
    });
 }
 
+const items = document.querySelectorAll("section, footer");
+
 function isLastSectionOrFooter(element) {
-   const elements = document.querySelectorAll("section, footer");
-   return element === elements[elements.length - 1];
+   return element === items[items.length - 1];
 }
 
 function updateScrollButtonText() {
    const button = document.getElementById("sidemenu-scroll");
    const buttonText = document.getElementById("sidemenu-scroll-text");
-   const elements = document.querySelectorAll("section, footer");
-   const lastElement = elements[elements.length - 1];
+   const lastElement = items[items.length - 1];
 
    if (lastElement.getBoundingClientRect().top <= window.innerHeight) {
       buttonText.textContent = "Scroll Up";
@@ -157,12 +157,11 @@ function updateScrollButtonText() {
 }
 
 function scrollToNextSectionOrFooter() {
-   const elements = document.querySelectorAll("section, footer");
    let nextElement = null;
 
-   elements.forEach((element, index) => {
+   items.forEach((element, index) => {
       if (element.getBoundingClientRect().top > 0 && !nextElement) {
-         nextElement = elements[index];
+         nextElement = items[index];
       }
    });
 
@@ -175,8 +174,7 @@ function scrollToNextSectionOrFooter() {
 document
    .getElementById("sidemenu-scroll")
    .addEventListener("click", function () {
-      const elements = document.querySelectorAll("section, footer");
-      const lastElement = elements[elements.length - 1];
+      const lastElement = items[items.length - 1];
 
       if (lastElement.getBoundingClientRect().top <= window.innerHeight) {
          window.scrollTo({ top: 0, behavior: "smooth" });

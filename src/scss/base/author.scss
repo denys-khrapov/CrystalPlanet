@@ -48,6 +48,10 @@
 		line-height: 21px;
 		letter-spacing: 0.56px;
 	}
+
+	&__position {
+		color: $cosmic-800;
+	}
 }
 
 @media (max-width: $md1) {
@@ -75,9 +79,9 @@
 			max-width: 183px;
 			width: 100%;
 
-			>p:first-child {
-				margin-bottom: -4px;
-			}
+			// >p:first-child {
+			// 	margin-bottom: -4px;
+			// }
 		}
 	}
 

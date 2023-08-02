@@ -1,6 +1,8 @@
 /*! -- Announcement styles----------------------------- */
 .announcement {
-	padding: 64px 190px 62px 42px;
+	padding: 63px 190px 62px 42px;
+	border-top: 1px solid $cosmic-100;
+	background-color: $cosmic-50;
 
 	&__container {
 		display: flex;
@@ -12,7 +14,7 @@
 
 	/*! -- Announcement styles----------------------------- */
 	.announcement {
-		padding: 64px 0px;
+		padding: 63px 0px 64px;
 
 		&__container {
 			display: flex;

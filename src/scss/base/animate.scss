@@ -37,7 +37,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) rotate(0deg);
-	animation: rotateStars1 20s linear infinite;
+	animation: rotateStars1 30s linear infinite;
 }
 
 .stars-2 {
@@ -46,7 +46,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) rotate(-45deg);
-	animation: rotateStars2 25s linear infinite;
+	animation: rotateStars2 40s linear infinite;
 }
 
 .team {
@@ -59,31 +59,42 @@
 }
 
 
+// @keyframes rotateStars1 {
+// 	0% {
+// 		transform: translate(-50%, -50%) rotate(-0deg);
+// 	}
+
+// 	20% {
+// 		transform: translate(-50%, -50%) rotate(-30deg);
+// 	}
+
+// 	40% {
+// 		transform: translate(-50%, -50%) rotate(-60deg);
+// 	}
+
+// 	60% {
+// 		transform: translate(-50%, -50%) rotate(-90deg);
+
+// 	}
+
+// 	80% {
+// 		transform: translate(-50%, -50%) rotate(-120deg);
+
+// 	}
+
+// 	100% {
+// 		transform: translate(-50%, -50%) rotate(0deg);
+
+// 	}
+// }
+
 @keyframes rotateStars1 {
 	0% {
 		transform: translate(-50%, -50%) rotate(-0deg);
 	}
 
-	20% {
-		transform: translate(-50%, -50%) rotate(-30deg);
-	}
-
-	40% {
-		transform: translate(-50%, -50%) rotate(-60deg);
-	}
-
-	60% {
-		transform: translate(-50%, -50%) rotate(-90deg);
-
-	}
-
-	80% {
-		transform: translate(-50%, -50%) rotate(-120deg);
-
-	}
-
 	100% {
-		transform: translate(-50%, -50%) rotate(0deg);
+		transform: translate(-50%, -50%) rotate(-360deg);
 
 	}
 }
@@ -93,32 +104,43 @@
 		transform: translate(-50%, -50%) rotate(-45deg);
 	}
 
-	20% {
-		transform: translate(-50%, -50%) rotate(-75deg);
-
-	}
-
-	40% {
-		transform: translate(-50%, -50%) rotate(-105deg);
-
-	}
-
-	60% {
-		transform: translate(-50%, -50%) rotate(-135deg);
-
-
-	}
-
-	80% {
-		transform: translate(-50%, -50%) rotate(-165deg);
-
-
-	}
-
 	100% {
-		transform: translate(-50%, -50%) rotate(-45deg);
+		transform: translate(-50%, -50%) rotate(-360deg);
+
 	}
 }
+
+// @keyframes rotateStars2 {
+// 	0% {
+// 		transform: translate(-50%, -50%) rotate(-45deg);
+// 	}
+
+// 	20% {
+// 		transform: translate(-50%, -50%) rotate(-75deg);
+
+// 	}
+
+// 	40% {
+// 		transform: translate(-50%, -50%) rotate(-105deg);
+
+// 	}
+
+// 	60% {
+// 		transform: translate(-50%, -50%) rotate(-135deg);
+
+
+// 	}
+
+// 	80% {
+// 		transform: translate(-50%, -50%) rotate(-165deg);
+
+
+// 	}
+
+// 	100% {
+// 		transform: translate(-50%, -50%) rotate(-45deg);
+// 	}
+// }
 
 @media (max-width:$md1) {
 
