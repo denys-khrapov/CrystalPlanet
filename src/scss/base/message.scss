@@ -1,0 +1,88 @@
+/*! -- Message styles----------------------------- */
+.message {
+	border-radius: 4px;
+	background: $sand-50;
+	position: absolute;
+	top: 227px;
+	right: 20.94%;
+	max-width: 546px;
+	width: 100%;
+	z-index: 1;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 50%;
+		transform: translateX(-50%) rotate(-45deg);
+		background-color: $sand-50;
+		width: 27px;
+		height: 27px;
+	}
+
+	&__inner {
+		padding: 16px 16px 24px;
+		display: flex;
+		flex-direction: row;
+		column-gap: 16px;
+	}
+
+	&__column {
+		display: flex;
+
+		p {
+			color: $cosmic-900;
+			letter-spacing: 0.64px;
+		}
+
+		a {
+			flex: 1;
+			white-space: nowrap;
+		}
+
+	}
+}
+
+@media (max-width:$md1) {
+
+	/*! -- Message styles----------------------------- */
+	.message {
+		max-width: 256px;
+		top: 232px;
+		right: 32px;
+
+		&__inner {
+			padding: 8px;
+			flex-direction: column;
+			row-gap: 8px;
+		}
+
+		&__column {
+			p {
+				font-size: 12px;
+				font-weight: 300;
+				line-height: 18px;
+				letter-spacing: 0.48px;
+			}
+
+			&:first-child {
+				display: none;
+			}
+
+			.links {
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 17px;
+				letter-spacing: 4.2px;
+				justify-content: flex-end;
+				position: relative;
+				z-index: 1;
+
+				svg {
+					width: 32px;
+					height: 32px;
+				}
+			}
+		}
+	}
+}

@@ -939,6 +939,64 @@ body.lock {
   text-transform: uppercase;
 }
 
+/*! -- Message styles----------------------------- */
+
+.message {
+  border-radius: 4px;
+  background: #f8f3ed;
+  position: absolute;
+  top: 227px;
+  right: 20.94%;
+  max-width: 546px;
+  width: 100%;
+  z-index: 1;
+}
+
+.message::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+  -ms-transform: translateX(-50%) rotate(-45deg);
+  transform: translateX(-50%) rotate(-45deg);
+  background-color: #f8f3ed;
+  width: 27px;
+  height: 27px;
+}
+
+.message__inner {
+  padding: 16px 16px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 16px;
+  -moz-column-gap: 16px;
+  column-gap: 16px;
+}
+
+.message__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.message__column p {
+  color: #393939;
+  letter-spacing: 0.64px;
+}
+
+.message__column a {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  white-space: nowrap;
+}
+
 /*! -- Header styles----------------------------- */
 
 .header {
@@ -1551,6 +1609,53 @@ body.lock {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+}
+
+.graphic__subtitle {
+  letter-spacing: 0.64px;
+}
+
+.graphic__text {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 35px;
+  letter-spacing: 1.12px;
+}
+
+.graphic--sand {
+  padding: 96px 0px 64px;
+  min-height: auto;
+  height: auto;
+  color: #f8f3ed;
+  overflow: hidden;
+}
+
+.graphic--sand .graphic__container {
+  row-gap: 622px;
+}
+
+.graphic--sand .author__position {
+  color: #f8f3ed;
+}
+
+.no-webp .graphic--sand::before {
+  background-image: url("../img/graphic-sand-bg.jpg");
+}
+
+.graphic--sand::after {
+  content: "";
+  position: absolute;
+  bottom: -152px;
+  left: -290px;
+  width: 2500px;
+  height: 340px;
+  background: #111;
+  -webkit-filter: blur(75px);
+  filter: blur(75px);
+}
+
+.graphic--sand .author-message::after {
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .graphic__container {
@@ -2572,6 +2677,10 @@ body.lock {
   background-image: url(../img/graphic-bg.webp);
 }
 
+.webp .graphic--sand::before {
+  background-image: url(../img/graphic-sand-bg.webp);
+}
+
 .webp .vision::before {
   background-image: url(../img/vision-decor-bg.webp);
 }
@@ -3049,6 +3158,51 @@ body.lock {
     height: 16px;
   }
 
+  /*! -- Message styles----------------------------- */
+
+  .message {
+    max-width: 256px;
+    top: 232px;
+    right: 32px;
+  }
+
+  .message__inner {
+    padding: 8px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  .message__column p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0.48px;
+  }
+
+  .message__column:first-child {
+    display: none;
+  }
+
+  .message__column .links {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: 4.2px;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+  }
+
+  .message__column .links svg {
+    width: 32px;
+    height: 32px;
+  }
+
   /*! -- Header styles----------------------------- */
 
   .header {
@@ -3340,6 +3494,45 @@ body.lock {
 
   .no-webp .graphic::before {
     background-image: url("../img/graphic-bg-1199.jpg");
+  }
+
+  .graphic__subtitle {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.48px;
+  }
+
+  .graphic__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.64px;
+  }
+
+  .graphic--sand {
+    padding: 64px 0px 64px;
+    min-height: 684px;
+  }
+
+  .no-webp .graphic--sand::before {
+    background-image: url("../img/graphic-sand-bg-1199.jpg");
+  }
+
+  .graphic--sand::before {
+    background-position: 58% center;
+  }
+
+  .graphic--sand .graphic__container {
+    row-gap: 0px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 100%;
+    min-height: inherit;
+  }
+
+  .graphic--sand .author__text-holder {
+    max-width: 100%;
   }
 
   .graphic .dynamic-left {
@@ -4048,6 +4241,10 @@ body.lock {
 
   .webp .graphic::before {
     background-image: url(../img/graphic-bg-1199.webp);
+  }
+
+  .webp .graphic--sand::before {
+    background-image: url(../img/graphic-sand-bg-1199.webp);
   }
 
   .webp .sustainability::before {
