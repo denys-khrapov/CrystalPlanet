@@ -1809,6 +1809,15 @@ body.lock {
   padding: 61px 0px 515px;
 }
 
+.sustainability--sand {
+  background-color: #f3f3f3;
+  padding: 128px 0px 128px;
+}
+
+.sustainability--sand::before {
+  display: none;
+}
+
 .no-webp .sustainability::before {
   background-image: url("../img/sustainability-bg.jpg");
 }
@@ -2068,6 +2077,7 @@ body.lock {
   line-height: 57px;
   letter-spacing: 1.52px;
   text-transform: uppercase;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-repeat: no-repeat;
@@ -3548,6 +3558,10 @@ body.lock {
 
   .sustainability {
     padding: 64px 0px 384px;
+  }
+
+  .sustainability--sand {
+    padding: 128px 0px 128px;
   }
 
   .no-webp .sustainability::before {

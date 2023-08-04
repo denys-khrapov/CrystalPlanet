@@ -3,6 +3,15 @@
 	position: relative;
 	padding: 61px 0px 515px;
 
+	&--sand {
+		background-color: $cosmic-50;
+		padding: 128px 0px 128px;
+
+		&::before {
+			display: none;
+		}
+	}
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -141,6 +150,11 @@
 	/*! -- Sustainability styles----------------------------- */
 	.sustainability {
 		padding: 64px 0px 384px;
+
+		&--sand {
+			padding: 128px 0px 128px;
+
+		}
 
 		&::before {
 			background-image: url("../img/sustainability-bg-1199.jpg");
