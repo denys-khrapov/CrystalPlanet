@@ -2,9 +2,10 @@
 .circle {
 	content: '';
 	position: absolute;
-	top: -175px;
+	top: -185px;
 	left: 50%;
 	transform: translateX(-50%);
+	z-index: 3;
 
 	img {
 		animation: rotateCircle 30s linear infinite;
@@ -12,7 +13,7 @@
 
 	svg {
 		position: absolute;
-		top: 50%;
+		top: 52%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
@@ -38,6 +39,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%) rotate(0deg);
 	animation: rotateStars1 30s linear infinite;
+	z-index: 3;
 }
 
 .stars-2 {
@@ -47,6 +49,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%) rotate(-45deg);
 	animation: rotateStars2 40s linear infinite;
+	z-index: 3;
 }
 
 .team {
@@ -58,35 +61,6 @@
 	}
 }
 
-
-// @keyframes rotateStars1 {
-// 	0% {
-// 		transform: translate(-50%, -50%) rotate(-0deg);
-// 	}
-
-// 	20% {
-// 		transform: translate(-50%, -50%) rotate(-30deg);
-// 	}
-
-// 	40% {
-// 		transform: translate(-50%, -50%) rotate(-60deg);
-// 	}
-
-// 	60% {
-// 		transform: translate(-50%, -50%) rotate(-90deg);
-
-// 	}
-
-// 	80% {
-// 		transform: translate(-50%, -50%) rotate(-120deg);
-
-// 	}
-
-// 	100% {
-// 		transform: translate(-50%, -50%) rotate(0deg);
-
-// 	}
-// }
 
 @keyframes rotateStars1 {
 	0% {
@@ -110,37 +84,6 @@
 	}
 }
 
-// @keyframes rotateStars2 {
-// 	0% {
-// 		transform: translate(-50%, -50%) rotate(-45deg);
-// 	}
-
-// 	20% {
-// 		transform: translate(-50%, -50%) rotate(-75deg);
-
-// 	}
-
-// 	40% {
-// 		transform: translate(-50%, -50%) rotate(-105deg);
-
-// 	}
-
-// 	60% {
-// 		transform: translate(-50%, -50%) rotate(-135deg);
-
-
-// 	}
-
-// 	80% {
-// 		transform: translate(-50%, -50%) rotate(-165deg);
-
-
-// 	}
-
-// 	100% {
-// 		transform: translate(-50%, -50%) rotate(-45deg);
-// 	}
-// }
 
 @media (max-width:$md1) {
 

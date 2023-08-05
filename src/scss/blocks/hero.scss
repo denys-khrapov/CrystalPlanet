@@ -1,25 +1,45 @@
 /*! -- Hero styles----------------------------- */
+
+@media(min-width:1920px) {
+
+	.hero {
+
+		&--sand {
+			background-size: cover;
+
+			.house {
+				display: none;
+			}
+		}
+
+	}
+
+}
+
 .hero {
 	min-height: 750px;
 	height: 100vh;
+	max-height: 1080px;
 	position: relative;
 	overflow: hidden;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
 
-	&::before {
-		content: "";
+	&__image-holder {
 		position: absolute;
-		left: 0;
 		top: 0;
-		right: 0;
-		bottom: 0;
-		background-image: url("../img/hero-bg.jpg");
-		background-position: center center;
-		background-size: cover;
-		background-repeat: no-repeat;
+		left: 0;
 		width: 100%;
 		height: 100%;
-		z-index: -1;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
+
 
 	&__container {
 		display: flex;
@@ -118,6 +138,126 @@
 			color: $cosmic-50;
 		}
 	}
+
+	&--sand {
+		padding: 233px 0px 32px;
+		background-position: 50% 50%;
+		background-size: 1920px 1024px;
+		background-repeat: no-repeat;
+		z-index: 1;
+
+		.dust {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-size: 200px 200px;
+			background-repeat: repeat;
+			z-index: 2;
+		}
+
+		// .house {
+		// 	position: absolute;
+		// 	top: calc(50% + 96px);
+		// 	left: 50%;
+		// 	transform: translate(-50%, -50%);
+		// 	width: 602px;
+		// 	height: 293px;
+		// 	background-size: cover;
+		// 	background-repeat: -no-repeat;
+		// 	z-index: 2;
+		// }
+
+		.house {
+			position: absolute;
+			top: calc(50% + 96px);
+			left: 50%;
+			transform: translate(-50%, -50%);
+			// width: 602px;
+			// height: 293px;
+			background-size: cover;
+			background-repeat: -no-repeat;
+			z-index: 2;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -383px;
+			left: -25%;
+			width: 3000px;
+			height: 761px;
+			background: var(--additional-background, #111);
+			filter: blur(130px);
+			z-index: 2;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -363px;
+			left: -25%;
+			width: 3000px;
+			height: 600px;
+			background: var(--additional-background, #111);
+			filter: blur(75px);
+			z-index: 2;
+		}
+
+		.hero__container {
+			align-items: normal;
+			max-width: 1014px;
+			width: 100%;
+			padding: 0px 0px 0px 0px;
+		}
+
+		.hero__content {
+			min-width: auto;
+			max-width: 100%;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.hero__title {
+			font-size: 150px;
+			font-weight: 400;
+			line-height: 225px;
+			letter-spacing: 9px;
+			text-transform: uppercase;
+		}
+
+		.hero__subtitle {
+			display: flex;
+			flex-direction: row;
+			column-gap: 8px;
+			align-items: center;
+			align-self: flex-end;
+			font-size: 32px;
+			line-height: 48px;
+			letter-spacing: 1.92px;
+			margin: -32px 0px 0px 0px;
+		}
+
+		.hero__text {
+			margin: auto 0px 0px 0px;
+			max-width: 400px;
+			width: 100%;
+			color: #eeeeee;
+			font-size: 25px;
+			font-weight: 400;
+			line-height: 37.5px;
+			letter-spacing: 6.25px;
+		}
+	}
 }
 
 
@@ -143,10 +283,6 @@
 		min-height: auto;
 		padding: 128px 0px;
 		margin: 64px 0px 0px 0px;
-
-		&::before {
-			background-image: url("../img/hero-bg-1199.jpg");
-		}
 
 		.dynamic-left,
 		.dynamic-right {
@@ -208,6 +344,68 @@
 						fill: $sand-source;
 					}
 				}
+			}
+		}
+
+		&--sand {
+			padding: 128px 0px 96px;
+			min-height: 588px;
+
+			.hero__container {
+				min-height: inherit;
+				padding: 0 32px;
+			}
+
+			.hero__title {
+				font-size: 58px;
+				line-height: 87px;
+				letter-spacing: 3.48px;
+				margin: 0px 0px 0px 0px;
+			}
+
+			.hero__subtitle {
+				font-size: 22px;
+				line-height: 33px;
+				letter-spacing: 1.32px;
+				margin: 0px 0px 0px 0px;
+				align-self: center;
+			}
+
+			.hero__text {
+				font-size: 22px;
+				line-height: 33px;
+				letter-spacing: 1.32px;
+				max-width: 100%;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: -288px;
+				left: -25%;
+				width: 2080px;
+				height: 571px;
+				background: #111;
+				filter: blur(97.5px);
+				z-index: 2;
+			}
+
+			.house {
+				top: calc(50% + 107px);
+				height: 291px;
+				width: 1199px;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -231px;
+				left: -25%;
+				width: 2080px;
+				height: 450px;
+				background: #111;
+				filter: blur(56.25px);
+				z-index: 2;
 			}
 		}
 	}
