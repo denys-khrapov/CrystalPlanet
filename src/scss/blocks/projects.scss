@@ -41,7 +41,45 @@
 		letter-spacing: 1.12px;
 	}
 
-	&--sand {
+	&--sand-1 {
+		padding: 288px 0px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, #111 36%, rgba(17, 17, 17, 0.00) 100%);
+			z-index: 1;
+		}
+
+		.projects__container {
+			position: relative;
+			z-index: 5;
+		}
+
+		.projects__text {
+			color: $sand-50;
+			text-align: center;
+			font-size: 28px;
+			font-weight: 300;
+			line-height: 30px;
+			letter-spacing: 1.12px;
+
+			span {
+				color: $sand-source;
+				font-family: 'Felidae';
+				font-size: 28px;
+				font-weight: 400;
+				letter-spacing: 1.68px;
+			}
+		}
+	}
+
+	&--sand-2 {
 		.projects__title {
 			margin: 0px 0px 48px 0px;
 		}
@@ -121,7 +159,42 @@
 			letter-spacing: 0.8px;
 		}
 
-		&--sand {
+
+		&--sand-1 {
+			padding: 127px 0px;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(180deg, #111 32%, rgba(17, 17, 17, 0.00) 75%);
+				z-index: 6;
+			}
+
+			.projects__container {
+				z-index: 6;
+			}
+
+			.projects__text {
+				font-size: 20px;
+				font-weight: 300;
+				line-height: 30px;
+				letter-spacing: 0.8px;
+				max-width: 100%;
+
+				span {
+					font-size: 20px;
+					font-weight: 300;
+					letter-spacing: 0.8px;
+				}
+			}
+
+		}
+
+		&--sand-2 {
 			.projects__title {
 				margin: 0px 0px 16px 0px;
 			}

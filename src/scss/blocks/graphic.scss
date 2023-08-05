@@ -1,5 +1,9 @@
 /*! -- Graphic styles----------------------------- */
 
+.test {
+	height: 648px;
+}
+
 .graphic {
 	padding: 128px 0px 62px;
 	position: relative;
@@ -32,40 +36,7 @@
 		letter-spacing: 1.12px;
 	}
 
-	&--sand {
-		padding: 96px 0px 64px;
-		min-height: auto;
-		height: auto;
-		color: $sand-50;
-		overflow: hidden;
 
-		.graphic__container {
-			row-gap: 622px;
-		}
-
-		.author__position {
-			color: $sand-50;
-		}
-
-		&::before {
-			background-image: url("../img/graphic-sand-bg.jpg");
-		}
-
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: -152px;
-			left: -290px;
-			width: 2500px;
-			height: 340px;
-			background: #111;
-			filter: blur(75px);
-		}
-
-		.author-message::after {
-			background: rgba(255, 255, 255, 0.15);
-		}
-	}
 
 	&__container {
 		position: relative;
@@ -116,11 +87,87 @@
 		width: 100%;
 		letter-spacing: 0.64px;
 	}
+
+	&--sand-1 {
+		padding: 64px 0px 96px;
+		min-height: auto;
+		height: auto;
+		color: $sand-50;
+
+		.graphic__description {
+			width: 100%;
+			max-width: 633px;
+		}
+
+		.graphic__container {
+			row-gap: 633px;
+		}
+
+		.author__position {
+			color: $sand-50;
+		}
+
+		.author-message::after {
+			background: rgba(255, 255, 255, 0.15);
+		}
+
+		&::before {
+			top: unset;
+			background-image: url("../img/graphic-sand-1-bg.jpg");
+			height: 1400px;
+		}
+
+		.graphic__content--bottom {
+			width: 100%;
+			max-width: 380px;
+			min-width: auto;
+			margin-left: auto;
+		}
+	}
+
+
+	&--sand-2 {
+		padding: 96px 0px 64px;
+		min-height: auto;
+		height: auto;
+		color: $sand-50;
+		overflow: hidden;
+
+		.graphic__container {
+			row-gap: 622px;
+		}
+
+		.author__position {
+			color: $sand-50;
+		}
+
+		&::before {
+			background-image: url("../img/graphic-sand-2-bg.jpg");
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -152px;
+			left: -290px;
+			width: 2500px;
+			height: 340px;
+			background: #111;
+			filter: blur(75px);
+		}
+
+		.author-message::after {
+			background: rgba(255, 255, 255, 0.15);
+		}
+
+
+	}
+
+
 }
 
 @media (max-width: $md1) {
 
-	/*! -- Graphic styles----------------------------- */
 	.graphic {
 		padding: 256px 0px 64px;
 		height: auto;
@@ -143,12 +190,35 @@
 			letter-spacing: 0.64px;
 		}
 
-		&--sand {
+		&--sand-1 {
+			padding: 64px 0px 96px;
+			min-height: 614px;
+
+			&::before {
+				background-image: url("../img/graphic-sand-bg-1-1199.jpg");
+				height: 1199px;
+			}
+
+			.graphic__container {
+				row-gap: 0px;
+				justify-content: space-between;
+				height: 100%;
+				min-height: inherit;
+			}
+
+			.graphic__content--bottom {
+				margin-left: unset;
+				max-width: 100%;
+			}
+		}
+
+		&--sand-2 {
 			padding: 64px 0px 64px;
 			min-height: 684px;
 
 			&::before {
-				background-image: url("../img/graphic-sand-bg-1199.jpg");
+
+				background-image: url("../img/graphic-sand-bg-2-1199.jpg");
 				background-position: 58% center;
 			}
 
@@ -162,6 +232,8 @@
 			.author__text-holder {
 				max-width: 100%;
 			}
+
+
 		}
 
 		.dynamic-left {
