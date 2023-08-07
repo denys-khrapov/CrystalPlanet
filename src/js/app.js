@@ -1,5 +1,8 @@
 jQuery(document).ready(function ($) {
    testWebPFunction();
+   if ($(".amenities-slider").length > 0) {
+      initSwiper();
+   }
    if (window.innerWidth >= 1200) {
       initScrollTo();
    }
@@ -120,6 +123,34 @@ function initAccordion() {
    });
 }
 
+function initSwiper() {
+   let swiperAmenities = new Swiper(".amenities-slider", {
+      navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+         320: {
+            loop: false,
+            slidesPerView: "auto",
+            spaceBetween: 16,
+         },
+         1200: {
+            slidesPerView: "3",
+            spaceBetween: 16,
+            loop: false,
+            pagination: false,
+         },
+         1685: {
+            slidesPerView: "5",
+            spaceBetween: 16,
+            loop: false,
+            pagination: false,
+         },
+      },
+   });
+}
+
 function initScrollTo() {
    $("a.scroll-to").click(function () {
       var target = $($(this).attr("href"));
@@ -135,7 +166,6 @@ function initScrollTo() {
       return false;
    });
 }
-
 const items = document.querySelectorAll("section, footer");
 
 function isLastSectionOrFooter(element) {
@@ -166,7 +196,7 @@ function scrollToNextSectionOrFooter() {
    });
 
    if (nextElement) {
-      nextElement.scrollIntoView({ behavior: "smooth" });
+      nextElement.scrollIntoView({ behavior: "smooth", block: "start" });
       updateScrollButtonText();
    }
 }
@@ -175,7 +205,6 @@ document
    .getElementById("sidemenu-scroll")
    .addEventListener("click", function () {
       const lastElement = items[items.length - 1];
-
       if (lastElement.getBoundingClientRect().top <= window.innerHeight) {
          window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
