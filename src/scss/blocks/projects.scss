@@ -42,7 +42,7 @@
 	}
 
 	&--sand-1 {
-		padding: 288px 0px;
+		padding: 291px 0px;
 		position: relative;
 
 		&::before {
@@ -68,6 +68,8 @@
 			font-weight: 300;
 			line-height: 30px;
 			letter-spacing: 1.12px;
+			width: 100%;
+			max-width: 547px;
 
 			span {
 				color: $sand-source;
@@ -80,6 +82,8 @@
 	}
 
 	&--sand-2 {
+		padding: 158px 0px;
+
 		.projects__title {
 			margin: 0px 0px 48px 0px;
 		}

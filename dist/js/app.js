@@ -8,6 +8,9 @@ jQuery(document).ready(function ($) {
    }
    initMobileMenu();
    initAccordion();
+   if (window.innerWidth <= 1199) {
+      initReadMore();
+   }
 });
 
 function testWebPFunction() {
@@ -149,6 +152,174 @@ function initSwiper() {
          },
       },
    });
+
+   let swiper = new Swiper(".slider-gallery-slider", {
+      navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+      },
+      watchSlidesProgress: true,
+
+      breakpoints: {
+         320: {
+            loop: false,
+            slidesPerView: "auto",
+            spaceBetween: 16,
+         },
+         1200: {
+            slidesPerView: "auto",
+            spaceBetween: 24,
+            loop: false,
+            pagination: false,
+         },
+      },
+   });
+
+   if (window.innerWidth >= 1200) {
+      swiper.snapGrid[swiper.snapGrid.length - 1] =
+         swiper.slidesGrid[swiper.slidesGrid.length - 1];
+   }
+
+   let sliderGalleryNav = new Swiper(".sliderGalleryNav", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      // watchSlidesProgress: true,
+      breakpoints: {
+         320: {
+            slidesPerView: "auto",
+         },
+         600: {
+            slidesPerView: "7",
+         },
+         1200: {
+            slidesPerView: "4",
+         },
+      },
+   });
+   let sliderGalleryFor = new Swiper(".sliderGalleryFor", {
+      spaceBetween: 10,
+      navigation: {
+         nextEl: ".button-next1",
+         prevEl: ".button-prev1",
+      },
+      thumbs: {
+         swiper: sliderGalleryNav,
+      },
+   });
+
+   let sliderGalleryNav2 = new Swiper(".sliderGalleryNav2", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+         320: {
+            slidesPerView: "auto",
+         },
+         600: {
+            slidesPerView: "7",
+         },
+         1200: {
+            slidesPerView: "4",
+         },
+      },
+   });
+   let sliderGalleryFor2 = new Swiper(".sliderGalleryFor2", {
+      spaceBetween: 10,
+      navigation: {
+         nextEl: ".button-next2",
+         prevEl: ".button-prev2",
+      },
+      thumbs: {
+         swiper: sliderGalleryNav2,
+      },
+   });
+
+   let sliderGalleryNav3 = new Swiper(".sliderGalleryNav3", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+         320: {
+            slidesPerView: "auto",
+         },
+         600: {
+            slidesPerView: "7",
+         },
+         1200: {
+            slidesPerView: "4",
+         },
+      },
+   });
+   let sliderGalleryFor3 = new Swiper(".sliderGalleryFor3", {
+      spaceBetween: 10,
+      navigation: {
+         nextEl: ".button-next3",
+         prevEl: ".button-prev3",
+      },
+      thumbs: {
+         swiper: sliderGalleryNav3,
+      },
+   });
+
+   let sliderGalleryNav4 = new Swiper(".sliderGalleryNav4", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+         320: {
+            slidesPerView: "auto",
+         },
+         600: {
+            slidesPerView: "7",
+         },
+         1200: {
+            slidesPerView: "4",
+         },
+      },
+   });
+   let sliderGalleryFor4 = new Swiper(".sliderGalleryFor4", {
+      spaceBetween: 10,
+      navigation: {
+         nextEl: ".button-next4",
+         prevEl: ".button-prev4",
+      },
+      thumbs: {
+         swiper: sliderGalleryNav4,
+      },
+   });
+
+   let sliderGalleryNav5 = new Swiper(".sliderGalleryNav5", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+         320: {
+            slidesPerView: "auto",
+         },
+         600: {
+            slidesPerView: "7",
+         },
+         1200: {
+            slidesPerView: "4",
+         },
+      },
+   });
+   let sliderGalleryFor5 = new Swiper(".sliderGalleryFor5", {
+      spaceBetween: 10,
+      navigation: {
+         nextEl: ".button-next5",
+         prevEl: ".button-prev5",
+      },
+      thumbs: {
+         swiper: sliderGalleryNav5,
+      },
+   });
+   let sliderGalleryFor6 = new Swiper(".sliderGalleryFor6", {});
 }
 
 function initScrollTo() {
@@ -199,6 +370,80 @@ function scrollToNextSectionOrFooter() {
       nextElement.scrollIntoView({ behavior: "smooth", block: "start" });
       updateScrollButtonText();
    }
+}
+
+// function initReadMore() {
+//    const more = $(".read-more");
+
+//    if (more) {
+//       more.click(function (e) {
+//          var currentMoreBtn = $(this);
+//          var contentHolder = currentMoreBtn.closest(
+//             ".slider-gallery-slide__inner"
+//          );
+//          var content = contentHolder.find(".content-inner");
+//          var contentFull = contentHolder.find(".content-full");
+//          var open = currentMoreBtn.hasClass("show");
+
+//          if (open) {
+//             content.removeAttr("style");
+//             currentMoreBtn.removeClass("show");
+//             currentMoreBtn.text("more"); // Изменяем текст кнопки на "more"
+//          } else {
+//             content.css("max-height", contentFull.height());
+//             currentMoreBtn.addClass("show");
+//             currentMoreBtn.text("roll up"); // Изменяем текст кнопки на "less"
+//          }
+//       });
+//    }
+// }
+
+function initReadMore() {
+   const more = $(".read-more");
+   let currentOpenBtn = null;
+
+   if (more) {
+      more.click(function (e) {
+         var currentMoreBtn = $(this);
+         var contentHolder = currentMoreBtn.closest(
+            ".slider-gallery-slide__inner"
+         );
+         var content = contentHolder.find(".content-inner");
+         var contentFull = contentHolder.find(".content-full");
+         var open = currentMoreBtn.hasClass("show");
+
+         if (currentOpenBtn && currentOpenBtn !== currentMoreBtn) {
+            // Закрываем предыдущий открытый отзыв
+            var prevContentHolder = currentOpenBtn.closest(
+               ".slider-gallery-slide__inner"
+            );
+            var prevContent = prevContentHolder.find(".content-inner");
+
+            prevContent.removeAttr("style");
+            currentOpenBtn.removeClass("show");
+            currentOpenBtn.text("more");
+         }
+
+         if (open) {
+            content.removeAttr("style");
+            currentMoreBtn.removeClass("show");
+            currentMoreBtn.text("more");
+         } else {
+            content.css("max-height", contentFull.height());
+            currentMoreBtn.addClass("show");
+            currentMoreBtn.text("roll up");
+         }
+
+         currentOpenBtn = open ? null : currentMoreBtn;
+      });
+   }
+}
+
+if ($("[data-fancybox]").length > 0) {
+   $("[data-fancybox]").fancybox({
+      touch: false,
+      autoFocus: false,
+   });
 }
 
 document

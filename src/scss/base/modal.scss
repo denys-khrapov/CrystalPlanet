@@ -1,8 +1,17 @@
 /*! -- Modal styles----------------------------- */
+body.compensate-for-scrollbar {
+	overflow: unset;
+	margin-right: 0;
+}
+
 .modal {
 	width: 100%;
 	max-width: 1116px;
 	height: 741px;
+
+	&--gallery {
+		height: auto;
+	}
 
 	&.fancybox-content {
 		padding: 32px;
@@ -36,8 +45,11 @@
 }
 
 
+
+
 @media (max-width:$md1) {
 	/*! -- Modal styles----------------------------- */
+
 
 	.fancybox-slide--html {
 		padding: 16px;
@@ -56,6 +68,13 @@
 			height: 34px;
 			top: 8px;
 			right: 8px;
+		}
+	}
+
+	.modal--gallery {
+		&.fancybox-content {
+			padding: 16px;
+
 		}
 	}
 }

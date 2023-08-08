@@ -1,6 +1,6 @@
 /*! -- Amenities styles----------------------------- */
 .amenities {
-	padding: 128px 0px;
+	padding: 101px 0px 130px;
 	position: relative;
 
 	&__image-holder {
@@ -27,7 +27,6 @@
 	&__header {
 		display: flex;
 		flex-direction: row;
-		align-items: center;
 		column-gap: 24px;
 		margin: 0px 0px 160px 0px;
 	}

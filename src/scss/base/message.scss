@@ -24,7 +24,7 @@
 		padding: 16px 16px 24px;
 		display: flex;
 		flex-direction: row;
-		column-gap: 16px;
+		column-gap: 15px;
 	}
 
 	&__column {
@@ -48,7 +48,7 @@
 	/*! -- Message styles----------------------------- */
 	.message {
 		max-width: 256px;
-		top: 232px;
+		top: 230px;
 		right: 32px;
 
 		&__inner {
@@ -77,6 +77,7 @@
 				justify-content: flex-end;
 				position: relative;
 				z-index: 1;
+				column-gap: 5px;
 
 				svg {
 					width: 32px;

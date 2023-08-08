@@ -133,8 +133,20 @@
 		color: $sand-50;
 		overflow: hidden;
 
+		.graphic__content--top {
+			column-gap: 17px;
+		}
+
 		.graphic__container {
 			row-gap: 622px;
+		}
+
+		.graphic__text {
+			span {
+				font-size: 16px;
+				line-height: 24px;
+				letter-spacing: 0.64px;
+			}
 		}
 
 		.author__position {
@@ -191,7 +203,7 @@
 		}
 
 		&--sand-1 {
-			padding: 64px 0px 96px;
+			padding: 64px 0px 98px;
 			min-height: 614px;
 
 			&::before {
@@ -210,11 +222,15 @@
 				margin-left: unset;
 				max-width: 100%;
 			}
+
+			.author__position {
+				margin-top: -4px;
+			}
 		}
 
 		&--sand-2 {
-			padding: 64px 0px 64px;
-			min-height: 684px;
+			padding: 62px 0px 64px;
+			min-height: 688px;
 
 			&::before {
 
@@ -233,6 +249,16 @@
 				max-width: 100%;
 			}
 
+			.graphic__text {
+				span {
+					font-size: 12px;
+					line-height: 18px;
+				}
+			}
+
+			.author__image-holder {
+				flex-shrink: 0;
+			}
 
 		}
 

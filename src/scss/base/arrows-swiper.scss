@@ -64,11 +64,82 @@
 
 }
 
+
+.button-next,
+.button-prev {
+	width: 48px;
+	height: 48px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	background-color: $sand-source;
+	border-radius: 50%;
+	transition: all 0.3s ease 0s;
+	z-index: 5;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+
+	&:hover {
+		background-color: $sand-500;
+	}
+
+	&:active {
+		background-color: $sand-400;
+	}
+
+	&:focus {
+		background-color: $sand-500;
+	}
+
+	&.swiper-button-disabled {
+		background-color: $cosmic-600;
+		opacity: 1;
+
+		svg {
+			path {
+				fill: $cosmic-500;
+			}
+		}
+	}
+
+}
+
+.button-prev {
+	left: 0;
+
+	svg {
+		transform: rotate(180deg);
+	}
+
+	&::after {
+		display: none;
+	}
+}
+
+.button-next {
+	right: 0px;
+
+	&::after {
+		display: none;
+	}
+
+}
+
 @media (max-width:$md1) {
 
 	/*! -- Arrows-swiper styles----------------------------- */
 	.swiper-button-next,
-	.swiper-button-prev {
+	.swiper-button-prev,
+	.button-next,
+	.button-prev {
 		position: static;
 		transform: unset;
 	}
