@@ -115,6 +115,10 @@ h6 {
   font-size: inherit;
 }
 
+.title-hidden {
+  display: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
